@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El día que cerró el mundo | Prólogo</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ESTILO TECNOTHRILLER / TOP SECRET */
+        :root {
+            --bg-dark: #0f172a;    /* Azul noche muy oscuro */
+            --text-light: #e2e8f0; /* Blanco azulado */
+            --accent: #0891b2;     /* Cian eléctrico */
+            --paper-dark: #1e293b; /* Gris azulado para cajas */
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+            font-family: 'Merriweather', serif;
+            line-height: 1.9;
+            font-size: 19px;
+        }
+
+        /* BARRA DE NAVEGACIÓN */
+        nav {
+            background: rgba(15, 23, 42, 0.95);
+            border-bottom: 1px solid var(--accent);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: var(--accent);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+        .back-link:hover { filter: brightness(1.3); }
+
+        /* CONTENEDOR CENTRAL */
+        .reader-container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 60px 25px 120px;
+        }
+
+        /* CABECERA EXPEDIENTE */
+        header {
+            border: 1px solid var(--accent);
+            padding: 30px;
+            margin-bottom: 60px;
+            position: relative;
+            background: rgba(8, 145, 178, 0.05);
+        }
+
+        header::before {
+            content: "DECRYPTED_FILE";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--bg-dark);
+            padding: 0 10px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--accent);
+        }
+
+        .book-title {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.8rem;
+            margin: 0;
+            color: white;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        /* TEXTO */
+        .chapter-content p {
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        /* LETRA CAPITULAR CIAN */
+        .chapter-content > p:first-of-type::first-letter {
+            float: left;
+            font-size: 5rem;
+            line-height: 0.8;
+            padding-right: 15px;
+            padding-top: 10px;
+            color: var(--accent);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* SEPARADOR DIGITAL */
+        .data-break {
+            text-align: center;
+            color: var(--accent);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            margin: 60px 0;
+            letter-spacing: 5px;
+        }
+
+        /* CAJA FINAL */
+        .cta-box {
+            background: var(--paper-dark);
+            border: 1px solid var(--accent);
+            padding: 40px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .btn-buy {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: bold;
+            font-size: 0.8rem;
+            margin-top: 25px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+        .btn-buy:hover { 
+            background-color: #06b6d4; 
+            box-shadow: 0 0 20px rgba(8, 145, 178, 0.4);
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .chapter-content > p:first-of-type::first-letter { font-size: 3.5rem; }
+            header { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="back-link">ACCESS_DENIED // RETURN TO HOME</a>
+    </nav>
+
+    <div class="reader-container">
+        
+        <header>
+            <div class="book-title">PROYECTO HT-Σ // CONFIDENCIAL</div>
+            <h1>El día que cerró el mundo</h1>
+            <p style="font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #64748b; margin-top: 15px;">
+                LOCATION: Geneva, Switzerland // Toronto, Canada
+            </p>
+        </header>
+
+        <div class="chapter-content">
+            <p>
+                Nevaba a mediodía de febrero en Ginebra. A orillas del lago Léman, una mansión, más vigilada que la Casa Blanca, abrió sus puertas cuatro veces en menos de una hora. Los guardias armados de la entrada comprobaron la identidad de cada visitante con los subfusiles adelantados. En una sociedad tan hermética como la suiza, donde cada cual va a lo suyo y más aún si nieva, aquel movimiento no pareció llamar la atención de nadie. De eso se trataba, pasar desapercibidos.
+            </p>
+            <p>
+                Dentro, junto a la entrada principal de lo que parecía un palacete, cuatro limusinas resplandecientes, impolutas y con los cristales tintados permanecían alineadas, como dispuestas a pasar revista. A su lado, ocho hombres de traje negro, con el inconfundible bulto bajo la axila, hablaban en voz baja sin perder detalle de cualquier ruido que llegara del interior. Ninguno fumaba; la prohibición debía figurar en sus contratos. El frío les enrojecía las orejas y les marcaba el vaho al respirar, pero ninguno se permitió meter las manos en los bolsillos.
+            </p>
+            <p>
+                En un salón de amplios ventanales con vistas al jardín, dos hombres y dos mujeres apuraban la comida. El cristal estaba ligeramente empañado por el contraste entre la calefacción interior y el aire de fuera, blanco y quieto. Solo pequeños comentarios y el choque de los cubiertos contra la vajilla rompían la calma. Hablar mientras se come es de mala educación. La conversación comenzaría con la llegada de los cafés, los destilados y algún habano escogido con esmero para la ocasión.
+            </p>
+            <p>
+                Presidía la reunión la dueña de la mansión, Sabine Keller, consejera delegada de Helixor Therapeutics, bioquímica de formación y doctora en Administración de Empresas. Pese a sus sesenta años, pocos le habrían echado más de cuarenta y cinco o, a lo sumo, cincuenta. La doctora Keller debía de cuidarse mucho, haber hecho un pacto con el diablo… o ambas cosas.
+            </p>
+            <p>
+                Era una mujer enigmática. Hermosa, de carácter afable y gran conversadora, pero del tipo que siempre parece reservarse algo, intereses que, por más que intentara disimular, sembraban cierta desconfianza en sus interlocutores. Su manera de sostener la taza, con dos dedos y la muñeca relajada, transmitía una calma que no se reflejaba en los ojos. Nada nuevo en el mundo de las grandes compañías.
+            </p>
+            <p>
+                Los asistentes pasaron a la biblioteca, algo más reducida que el comedor. El que parecía ser el mayordomo dejó los cafés, las bebidas y una cubitera con hielo cristalino sobre una mesa baja, alrededor de la cual un elegante tresillo acogía a los cuatro personajes. Un leve gesto de la anfitriona bastó para que el mayordomo saliera y cerrara la puerta tras de sí.
+            </p>
+            <p>
+                —Estimados amigos —tomó la palabra la doctora—, hemos sido convocados por nuestro estimado Graham. Yo solo me he limitado a recibiros aquí, en la discreta Suiza, así que no me queda más que cederle la palabra.
+            </p>
+            <p>
+                Graham Whitaker era un tipo alto, cercano al metro noventa, con ligeras canas en las sienes pese a no haber cumplido todavía los cincuenta. No cabía duda de que era el más poderoso de todos: dueño y fundador de Oxem Global Commerce, la mayor compañía de comercio electrónico del mundo. Un hombre con una visión de futuro prodigiosa y, como el resto, una ambición sin límites. Su voz tenía un tono bajo, entrenado para no subir jamás; hablaba como quien está acostumbrado a que lo escuchen inclinándose hacia delante.
+            </p>
+            <p>
+                —Amigos, llevamos años construyendo la globalización que, a día de hoy, es un hecho indiscutible. Aunque Oxem ha crecido a buen ritmo, creo que no estoy aprovechando todo su potencial. Supongo que a Michael le ocurre lo mismo, ya que su negocio va ligado al mío, o viceversa —dijo, mientras con la palma de la mano pedía paciencia a Sabine y Claire—. A su debido tiempo explicaré en qué os afecta este asunto. Cada cosa a su tiempo. Si todo sale como tengo previsto, auguro un incremento de ventas y beneficios extraordinario. Michael y yo, a medio o largo plazo; vosotras —añadió, dirigiéndose a Sabine y Claire—, el pelotazo a corto puede ser estratosférico.
+            </p>
+
+            <div class="data-break">ANALYZING_ENCRYPTED_DATA_STREAM...</div>
+
+            <p>
+                La nieve caía oblicua sobre Toronto, borrando los perfiles de los rascacielos y amortiguando el ruido del tráfico. En el apartamento de alquiler donde Amanda Smith llevaba dos semanas, el único sonido era el golpeteo de las teclas y el murmullo constante de la calefacción que expulsaba un calor seco que resecaba la garganta y hacía arder los ojos. La ventana, cubierta por una fina película de hielo, apenas dejaba pasar la luz gris de la tarde.
+            </p>
+            <p>
+                A sus cincuenta y dos años, Amanda había aprendido a vivir como si estuviera en un proceso judicial permanente: cada gesto medido, cada palabra filtrada. Sobre la mesa, un portátil sin adhesivos y un teléfono de prepago que no sonaba nunca. En la carpeta negra que siempre mantenía cerrada con una goma gruesa, descansaban contratos con sellos oficiales, correos impresos y licencias internacionales. Nada que, a simple vista, pareciera peligroso, pero había detalles que, unidos, formaban un patrón inquietante.
+            </p>
+            <p>
+                Bebió un sorbo de café ya frío y revisó por tercera vez la cláusula 14 de un contrato. Su dedo índice marcó un párrafo, como si quisiera subrayarlo en el aire. Le temblaba apenas la yema del dedo.
+            </p>
+            <p>
+                El zumbido breve del interfono la hizo tensarse. Sintió un pinchazo en el estómago, el viejo reflejo de adrenalina. Se levantó sin apartar la vista de la puerta, como si esperara que alguien la derribara de un golpe. Tomó la carpeta y la introdujo en una bolsa de papel, junto con una llave USB que llevaba colgada al cuello. Notó el frío del metal contra la piel.
+            </p>
+            <p>
+                Amanda apagó el portátil, guardó el teléfono y se puso un abrigo oscuro. Antes de salir, miró su reflejo en el cristal empañado de la ventana: el rostro pálido, el gesto tenso. En un tribunal, pensó, no parecería culpable… pero tampoco inocente.
+            </p>
+            <p>
+                Amanda cerró la puerta tras de sí y descendió por la escalera de incendios, evitando el ascensor. El hierro de la barandilla estaba helado y le quemó los dedos a través del guante fino. Cada peldaño vibraba bajo sus botas. La nieve le golpeaba la cara como agujas, disimulando el calor que sentía en la nuca. No miró atrás, aunque en el rabillo del ojo creyó ver una silueta en la acera opuesta.
+            </p>
+
+            <div class="data-break">END_OF_FILE // SYSTEM_LOCKED</div>
+        </div>
+
+        <div class="cta-box">
+            <h3 style="color: white; font-family: 'JetBrains Mono', monospace; font-size: 1.2rem; margin-top: 0;">¿Deseas conocer la verdad?</h3>
+            <p style="color: #94a3b8; font-size: 0.9rem;">El Proyecto HT-Σ ha comenzado. Suscríbete para recibir actualizaciones clasificadas.</p>
+            
+            <a href="index.html#contacto" class="btn-buy">Suscribirse al Boletín</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

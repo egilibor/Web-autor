@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiempos de rebotica | Capítulo 1</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Special+Elite&display=swap" rel="stylesheet">
+
+    <style>
+        /* ESTILO NOIR RURAL / EXPEDIENTE */
+        :root {
+            --bg-paper: #ffffff; 
+            --text-ink: #1a1a1a;
+            --accent: #b91c1c;   /* ROJO INTENSO de la cruz de la portada */
+        }
+
+        body {
+            background-color: var(--bg-paper);
+            color: var(--text-ink);
+            margin: 0;
+            padding: 0;
+            font-family: 'Merriweather', serif;
+            line-height: 1.8;
+            font-size: 19px;
+        }
+
+        /* BARRA DE NAVEGACIÓN */
+        nav {
+            background: white;
+            border-bottom: 3px solid var(--accent);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            text-align: center;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: #666;
+            font-family: 'Special Elite', cursive;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+        .back-link:hover { color: var(--accent); }
+
+        /* CONTENEDOR CENTRAL */
+        .reader-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 80px 25px 120px;
+        }
+
+        /* CABECERA */
+        header {
+            text-align: center;
+            margin-bottom: 70px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 40px;
+        }
+
+        .book-title {
+            font-family: 'Special Elite', cursive;
+            color: #888;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-family: 'Special Elite', cursive;
+            font-size: 3rem;
+            margin: 0;
+            color: var(--accent);
+            line-height: 1.1;
+        }
+
+        /* TEXTO */
+        .chapter-content p {
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        /* LETRA CAPITULAR ESTILO SELLO */
+        .chapter-content > p:first-of-type::first-letter {
+            float: left;
+            font-size: 5rem;
+            line-height: 0.8;
+            padding-right: 12px;
+            padding-top: 5px;
+            color: var(--accent);
+            font-family: 'Special Elite', cursive;
+            font-weight: bold;
+        }
+
+        /* CITAS O DIÁLOGOS DESTACADOS */
+        .dialogue {
+            border-left: 2px solid #ddd;
+            padding-left: 20px;
+            font-style: italic;
+            color: #444;
+        }
+
+        /* CAJA FINAL */
+        .cta-box {
+            background: #f9f9f9;
+            border: 2px solid var(--text-ink);
+            padding: 50px 30px;
+            text-align: center;
+            margin-top: 80px;
+            position: relative;
+        }
+
+        /* Efecto de "Sello" en la caja final */
+        .cta-box::after {
+            content: "TOP SECRET";
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-family: 'Special Elite', cursive;
+            color: rgba(185, 28, 28, 0.2);
+            font-size: 1.5rem;
+            transform: rotate(-15deg);
+        }
+
+        .btn-buy {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-family: 'Special Elite', cursive;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-top: 25px;
+            transition: 0.3s;
+        }
+        .btn-buy:hover { 
+            background-color: #000; 
+            transform: scale(1.05);
+        }
+        
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .chapter-content > p:first-of-type::first-letter { font-size: 4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="back-link">← REGRESAR AL ARCHIVO PRINCIPAL</a>
+    </nav>
+
+    <div class="reader-container">
+        
+        <header>
+            <div class="book-title">Tiempos de rebotica</div>
+            <h1>El perro</h1>
+        </header>
+
+        <div class="chapter-content">
+            <p>
+                Todo comenzó con la muerte de un perro de pelaje acaramelado. Esa mañana amaneció nevada. El manto se extendía frente a mi casa sin principio ni fin, ni a derecha ni a izquierda, ni arriba ni abajo. Solo un inmenso bloque blanco, homogéneo, sin fisuras, hermético, nacido a imagen y semejanza del lugar y sus gentes. Visto desde el ventanal, y pese al abrigo del calor de la estufa de leña, me dio frío. Perdón, lo que en realidad me produjo fue un profundo escalofrío.
+            </p>
+            <p>
+                Me habían cedido una vieja construcción junto a las escuelas. No sé de qué estaría hecha, pero la humedad rezumaba entre sus gruesos muros que, vista la facilidad con que se descascarillaban, debían ser de un material de muy baja calidad, aunque por qué no, igual se estaban cayendo de viejas o de pura mala leche de la que en Encinares parecía sobrar; vete a saber. 
+            </p>
+            <p>
+                La vivienda estaba sita en una calle de nombre Extramuros, fuera del exiguo núcleo del pueblo y cuyos dos únicos moradores éramos el maestro y yo. Forasteros ambos, como la calle. Él, andaluz, valenciano yo.
+            </p>
+            <p>
+                Intenté borrar de mi cabeza el estremecimiento que la nevada acababa de provocarme, lanzó la colilla del Winston al montículo de nieve que los remolinos habían formado junto a la puerta, me ajusté el inseparable chaquetón McCloud, ese día con más razón que nunca, y levantando la pelliza que tenía por solapa emprendí camino a la botica.
+            </p>
+            <p>
+                Tomé la calle que bajaba hacia la carretera, mezcla desparejada de tierra y piedras, cuando algo llamó mi atención. Un bulto color caramelo en extraña disposición, arrebujado contra una puerta metálica pintada de verde —como todos los portales del pueblo—, sobresalía ligeramente bajo un manto de nieve limpia. Ya a su altura certifiqué que se trataba de un perro, seguramente cazador vistas sus largas piernas en esos momentos rígidas y estiradas, casi descoyuntadas, como si hubiese muerto congelado, aunque en esto no me hagas mucho caso; entiendo poco de perros.
+            </p>
+            <p>
+                De inmediato fui consciente de lo desatinada de mi primera impresión. Un perro, más en un pueblo donde nunca faltan huecos donde cobijarse —corrales, establos, pajares, casas en ruinas y abandonadas—, era improbable que hubiera muerto helado. Los perros no son tontos; los de pueblo, menos.
+            </p>
+            <p>
+                Sí, estaba tieso, pero semejante rigor me olió más a químico que a físico, y yo sabía de los efectos que determinadas ponzoñas provocan en cualquier organismo vivo, no olvides que soy farmacéutico, el primero en la historia de Encinares. El animal parecía envenenado. Mal asunto; aquello no me gustó nada: seguro que acabaría trayendo cola. No era mucho el conocimiento que entonces yo poseía sobre la idiosincrasia de los encinarenses, pero podía hacerme una idea. Sin embargo, despertó en mí una curiosidad que por entonces había comenzado a cultivar a la sombra de nombres tales como Macondo, Comala, Amotape, pueblos todos ellos nacidos de la imaginación de los escritores que tocaba leer en esos tiempos: los latinoamericanos y su realismo mágico.
+            </p>
+            <p>
+                Eché una mirada a ambos lados de la calle y, tras suponer que nadie me había visto, apresuré el paso para llegar a la farmacia; precavido, ya que en Encinares siempre había algún visillo descorrido o alguna puerta descuidadamente entreabierta. La nieve seguía cayendo mansa sobre el cadáver de Canelo, que así resultó llamarse el chucho, y yo no quería acabar congelado como el pobre animal.
+            </p>
+            <p>
+                De camino a la farmacia pasé por la entrada del pueblo, una calle que apenas alcanzaba los diez metros unida a la carretera secundaria que llevaba a Toral. Sobre una de sus mal encaladas paredes todavía se distinguía la pintada que, con grandes letras negras, anunció escandalosamente en su día: «Se vende este pueblo». Años después conocí, de su propia boca, al responsable de tal chanza. Sujetaba la barra en un bar de Toral tras haber trasegado más alcohol del que su hígado era capaz de metabolizar, que debía ser mucha vista su enorme corpulencia.
+            </p>
+            <p>
+                El Chafao, que así se le conocía en Encinares, era un tipo taciturno, sobre la cuarentena, al que la lengua se le desataba a ráfagas cuando se hartaba de cervezas, hasta resultar pesado en exceso. «Te invito a una gorda, boticario» propuso en voz alta en el instante en que enfilaba la puerta del bar con tal de no tropezármelo de frente. Aliviado por no haber sido el elegido, un parroquiano me miró con conmiseración.
+            </p>
+            <p class="dialogue">
+                —Como te venía diciendo, esa pintada la hizo el Chafao porque es el único en todo Encinares que tiene cojones para decir la verdad. ¿O no es así?, ¿para qué sirven esta mierda de pueblos de mala muerte, si somos cuatro gatos malavenidos y con una mala leche que no se la salta un galgo? Yo siempre lo he dicho, boticario, el pueblo más pequeño debía ser como Madrid.
+            </p>
+            <p>
+                No es que yo estuviese de acuerdo con aquella sentencia que el paso de los años no ha logrado borrar de mi memoria; Madrid me parece demasiado grande, pero en el término medio está la virtud. En lo que sí coincidí con él fue en parte de su retórica: demasiada mala baba per cápita.
+            </p>
+            <p>
+                Desembocaba la exigua calle en un cruce de cuya esquina pendía una sucia bombilla de ínfima potencia, una de las pocas que conformaban el tenebroso alumbrado público de la localidad, si es que merecía tal apelativo. La primera noche que pasé por debajo de ella camino de casa, pude comprobar que su amarillento haz apenas alcanzaba el suelo, no supe si por su escasa fortaleza o por los años de roña que había acumulado en su cristal. 
+            </p>
+            <p>
+                Como en aquella novela de Henri Charrière, cuando recién llegado al penal de la Guayana francesa por un crimen que nunca cometió, yo, al igual que hizo Papillon en aquel momento, me prometí al llegar a la farmacia que solo tenía un objetivo por el que luchar: hacer lo imposible por escapar de aquel lugar. Como Papillon, pero con muchas menos penurias, también lo conseguí, aunque aún tenían que transcurrir algunos años.
+            </p>
+            <p>
+                Lo que pretendo contarte es una pequeña parte de aquella fuga, quizás la que más huella dejó en mí.
+            </p>
+        </div>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Special Elite', cursive; font-size: 1.5rem; margin-top: 0;">¿Quieres conocer el secreto de Encinares?</h3>
+            <p style="color: #666; font-size: 1rem;">La rebotica esconde más que medicinas. La historia del boticario solo acaba de empezar.</p>
+            
+            <a href="index.html#contacto" class="btn-buy">MANTENERME INFORMADO</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

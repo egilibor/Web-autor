@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emilio Gil Ibor | Narrativa</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* 1. RESET Y VARIABLES */
+        :root {
+            --color-ink: #0f172a;
+            --color-paper: #f8fafc;
+            --color-text: #334155;
+            
+            /* PALETA DE LIBROS */
+            --color-violin: #d4af37;   /* Dorado */
+            --color-cristal: #991b1b;  /* Rojo Sangre */
+            --color-alfarero: #1a202c; /* Negro Carbón */
+            --color-polvora: #ea580c;  /* Naranja Óxido */
+            --color-huella: #475569;   /* Azul Pizarra / Piedra */
+            
+            --color-accent: #2563eb;   /* Azul Enlaces */
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Lato', sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-paper);
+            color: var(--color-ink);
+            line-height: 1.6;
+        }
+
+        /* 2. UTILIDADES */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* BOTONES PERSONALIZADOS */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            border-width: 2px;
+            border-style: solid;
+            background: transparent;
+        }
+
+        /* Estilos específicos por libro */
+        .btn-gold { border-color: var(--color-violin); color: #854d0e; }
+        .btn-gold:hover { background-color: var(--color-violin); color: white; }
+
+        .btn-red { border-color: var(--color-cristal); color: var(--color-cristal); }
+        .btn-red:hover { background-color: var(--color-cristal); color: white; }
+
+        .btn-dark { border-color: var(--color-alfarero); color: var(--color-alfarero); }
+        .btn-dark:hover { background-color: var(--color-alfarero); color: white; }
+
+        .btn-orange { border-color: var(--color-polvora); color: var(--color-polvora); }
+        .btn-orange:hover { background-color: var(--color-polvora); color: white; }
+
+        .btn-blue { border-color: var(--color-huella); color: var(--color-huella); }
+        .btn-blue:hover { background-color: var(--color-huella); color: white; }
+
+        .btn-hero { background-color: var(--color-polvora); color: white; border-color: var(--color-polvora); padding: 15px 35px; }
+        .btn-hero:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); filter: brightness(1.1); }
+
+	/* 3. NAVBAR - ACTUALIZADO */
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            background: rgba(255, 255, 255, 0.98); /* Un poco más opaco para que se lea mejor */
+            border-bottom: 2px solid var(--color-ink); /* Línea más marcada */
+            z-index: 1000; 
+            height: 100px; /* Aumentado de 80px a 100px para que el nombre respire */
+            display: flex; align-items: center;
+            transition: 0.3s;
+        }
+        
+        nav .container { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            width: 100%; 
+        }
+
+        .logo { 
+            font-family: var(--font-serif); 
+            font-size: 2.2rem; /* Tamaño aumentado considerablemente */
+            font-weight: 700; 
+            color: var(--color-ink);
+            letter-spacing: -1.5px; /* Estilo editorial compacto */
+            line-height: 0.9;
+            text-transform: none; /* Mantiene mayúsculas/minúsculas naturales */
+        }
+
+        .menu { 
+            display: flex; 
+            gap: 35px; 
+            font-size: 0.85rem; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            color: #64748b; 
+            align-items: center;
+        }
+
+        /* Ajuste para móviles */
+        @media (max-width: 768px) {
+            nav { height: 80px; }
+            .logo { font-size: 1.6rem; letter-spacing: -1px; }
+        }
+        /* 4. HERO SECTION */
+        .hero {
+            padding: 160px 0 100px;
+            min-height: 85vh;
+            display: flex; align-items: center;
+            background: linear-gradient(to right, #fff 55%, #f1f5f9 55%);
+        }
+        .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .hero-content h1 { font-family: var(--font-serif); font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
+        .hero-image img {
+            width: 100%; max-width: 380px; display: block; margin: 0 auto;
+            border-radius: 4px; box-shadow: 20px 20px 0px rgba(0,0,0,0.05);
+            transition: 0.5s;
+        }
+        .hero-image img:hover { transform: scale(1.02); }
+
+        /* 5. SECCIÓN LIBROS */
+        .books-section { padding: 100px 0; background-color: white; scroll-margin-top: 80px; }
+        .section-header { margin-bottom: 60px; border-left: 5px solid var(--color-ink); padding-left: 20px; }
+        .section-header h2 { font-family: var(--font-serif); font-size: 2.5rem; }
+        
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 40px;
+        }
+
+        .book-card {
+            background: white; transition: 0.3s;
+            border: 1px solid #f1f5f9;
+            display: flex; flex-direction: column;
+            position: relative;
+        }
+        .book-card:hover { box-shadow: 0 20px 40px rgba(0,0,0,0.08); transform: translateY(-5px); }
+
+        .book-cover { height: 500px; background-color: #e2e8f0; position: relative; overflow: hidden; }
+        .book-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s; }
+        .book-card:hover .book-cover img { transform: scale(1.05); }
+
+        /* Filtro especial para Próximamente */
+        .coming-soon img { filter: grayscale(40%) blur(1px); }
+        .coming-soon:hover img { filter: grayscale(0%) blur(0px); }
+
+        .book-content { padding: 30px; flex-grow: 1; display: flex; flex-direction: column; }
+        .book-tag { font-size: 0.75rem; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+        .book-title { font-family: var(--font-serif); font-size: 1.8rem; margin-bottom: 15px; line-height: 1.2; }
+        .book-description { color: #64748b; font-size: 0.95rem; margin-bottom: 25px; line-height: 1.6; flex-grow: 1; }
+
+        /* 6. BIOGRAFÍA (ACTUALIZADO CON TU FOTO) */
+        .bio-section { padding: 100px 0; background-color: #f8fafc; scroll-margin-top: 80px; }
+        .bio-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 50px; align-items: center; }
+        .bio-image img {
+            width: 100%;
+            border-radius: 4px;
+            /* He quitado el grayscale para que se vean los colores naturales */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Sombra elegante */
+        }
+        .bio-content h3 { font-family: var(--font-serif); font-size: 2rem; margin-bottom: 20px; }
+
+        /* 7. CONTACTO */
+        .newsletter { background-color: var(--color-ink); color: white; padding: 80px 0; text-align: center; }
+        .form-input { padding: 15px 20px; width: 300px; border: none; background: #1e293b; color: white; }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero { padding-top: 100px; background: white; }
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .menu { display: none; }
+            .bio-grid { grid-template-columns: 1fr; }
+            .hero-image img { max-width: 280px; } /* Un poco más pequeña en móvil */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="container">
+            <div class="logo">Emilio Gil Ibor</div>
+            <div class="menu">
+                <a href="#obras">Novelas</a>
+                <a href="#biografia">El Autor</a>
+		<a href="blog.html">Blog</a> 
+                <a href="#contacto" style="font-weight: bold; color: var(--color-ink);">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+
+<header class="hero" id="inicio" style="padding: 180px 0 100px; min-height: 85vh; background: #f8fafc; overflow: hidden; display: flex; align-items: center;">
+    <div class="container">
+        <div class="hero-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+            
+            <div class="hero-content">
+                <span style="color: var(--color-polvora); text-transform: uppercase; letter-spacing: 3px; font-weight: bold; font-size: 0.9rem;">Explora el universo de</span>
+                <h1 style="font-family: var(--font-serif); font-size: 3.5rem; line-height: 1.1; margin: 15px 0 25px;">Emilio Gil Ibor</h1>
+                <p style="font-size: 1.2rem; color: var(--color-text); margin-bottom: 35px; max-width: 500px;">
+                    Desde el noir valenciano de la Saga Escrihuela hasta el realismo crudo de la España rural. Siete novelas, infinitas verdades por descubrir.
+                </p>
+                <div style="display: flex; gap: 15px;">
+                    <a href="#obras" class="btn btn-hero" style="background-color: var(--color-polvora); color:white; border:none; padding: 15px 30px; text-decoration:none; font-weight:bold;">Ver Bibliografía</a>
+                    <a href="autor.html" class="btn" style="border: 2px solid var(--color-ink); color: var(--color-ink); padding: 15px 30px; text-decoration:none; font-weight:bold;">El Autor</a>
+                </div>
+            </div>
+
+            <div class="hero-carousel" style="position: relative; height: 500px; width: 100%; display: flex; justify-content: center; align-items: center;">
+                <img src="violin-roto.png" class="slide" style="position: absolute; max-width: 350px; transition: opacity 1.5s ease-in-out; opacity: 1; border-radius: 4px; box-shadow: 20px 20px 60px rgba(0,0,0,0.15);">
+                <img src="seres-de-cristal.png" class="slide" style="position: absolute; max-width: 350px; transition: opacity 1.5s ease-in-out; opacity: 0; border-radius: 4px; box-shadow: 20px 20px 60px rgba(0,0,0,0.15);">
+                <img src="alfarero.png" class="slide" style="position: absolute; max-width: 350px; transition: opacity 1.5s ease-in-out; opacity: 0; border-radius: 4px; box-shadow: 20px 20px 60px rgba(0,0,0,0.15);">
+                <img src="la-polvora.png" class="slide" style="position: absolute; max-width: 350px; transition: opacity 1.5s ease-in-out; opacity: 0; border-radius: 4px; box-shadow: 20px 20px 60px rgba(0,0,0,0.15);">
+                <img src="rebotica.jpg" class="slide" style="position: absolute; max-width: 350px; transition: opacity 1.5s ease-in-out; opacity: 0; border-radius: 4px; box-shadow: 20px 20px 60px rgba(0,0,0,0.15);">
+                <img src="la-huella.png" class="slide" style="position: absolute; max-width: 350px; transition: opacity 1.5s ease-in-out; opacity: 0; border-radius: 4px; box-shadow: 20px 20px 60px rgba(0,0,0,0.15);">
+                <img src="el_dia_que.jpg" class="slide" style="position: absolute; max-width: 350px; transition: opacity 1.5s ease-in-out; opacity: 0; border-radius: 4px; box-shadow: 20px 20px 60px rgba(0,0,0,0.15);">
+            </div>
+
+        </div>
+    </div>
+</header>    <section class="books-section" id="obras">
+        <div class="container">
+            <div class="section-header">
+                <h2>Bibliografía</h2>
+                <p>Crónica negra, thriller psicológico y memoria.</p>
+            </div>
+
+            <div class="books-grid">
+                
+                <article class="book-card" style="border-top: 4px solid var(--color-violin);">
+                    <div class="book-cover">
+                        <img src="violin-roto.png" alt="Portada Violín Roto">
+			<div style="position: absolute; bottom: 0; left: 0; background: rgba(0,0,0,0.7); color: white; padding: 5px 15px; font-size: 0.7rem;">Inspector Escrihuela</div>
+
+                    </div>
+                    <div class="book-content">
+                        <span class="book-tag" style="color: #854d0e;">Misterio Histórico</span>
+                        <h3 class="book-title">Violín Roto</h3>
+                        <div class="book-description">
+                            <p><strong>Un conservatorio en silencio. Una nota de sangre.</strong></p>
+                            <p style="margin-top: 10px;">Una violinista degollada sin huellas del asesino. Una investigación que llevará a Escrihuela desde Valencia hasta los secretos de Chernóbil.</p>
+                        </div>
+			<a href="leer-violin.html" class="btn btn-gold" style="width: 100%;">Leer Primer Capítulo</a>
+			<a href="https://www.amazon.es/Viol%C3%ADn-roto-Emilio-Gil/dp/B0F8Q2ML3J" target="_blank" class="btn" style="flex: 1; background: #f0c14b; color: #111; border: 1px solid #a88734; font-size: 0.8rem; padding: 10px; font-weight: 			bold; text-align: center; text-decoration: none;">
+        		🛒 Amazon
+    			</a>
+                     </div>
+                </article>
+
+                <article class="book-card" style="border-top: 4px solid var(--color-cristal);">
+                    <div class="book-cover">
+                        <img src="seres-de-cristal.png" alt="Portada Seres de Cristal">
+                        <div style="position: absolute; bottom: 0; left: 0; background: rgba(0,0,0,0.7); color: white; padding: 5px 15px; font-size: 0.7rem;">Inspector Escrihuela</div>
+                    </div>
+                    <div class="book-content">
+                        <span class="book-tag" style="color: var(--color-cristal);">Thriller Psicológico</span>
+                        <h3 class="book-title">Seres de Cristal</h3>
+                        <div class="book-description">
+                            <p><strong>Justicia salvaje en la oficina.</strong></p>
+                            <p style="margin-top: 10px;">Un asesino caza a directivos maltratadores. Mientras la policía busca un ritual, él se esconde en una terapia de grupo junto a sus futuras víctimas.</p>
+                        </div>
+			<a href="leer_seres.html" class="btn btn-gold" style="width: 100%;">Leer Primer Capítulo</a>
+			<a href="https://www.amazon.es/Seres-cristal-Emilio-Gil-Ibor/dp/8418071184" target="_blank" class="btn" style="flex: 1; background: #f0c14b; color: #111; border: 1px solid #a88734; font-size: 0.8rem; padding: 10px; font-weight: 			bold; text-align: center; text-decoration: none;">
+        		🛒 Amazon
+    			</a>
+                    </div>
+                </article>
+
+                <article class="book-card" style="border-top: 4px solid var(--color-alfarero);">
+                    <div class="book-cover">
+                        <img src="alfarero.png" alt="Portada El Sueño del Alfarero">
+                        <div style="position: absolute; bottom: 0; left: 0; background: rgba(0,0,0,0.7); color: white; padding: 5px 15px; font-size: 0.7rem;">Inspector Escrihuela</div>
+                    </div>
+                    <div class="book-content">
+                        <span class="book-tag" style="color: var(--color-alfarero);">Noir / Corrupción</span>
+                        <h3 class="book-title">El sueño del alfarero</h3>
+                        <div class="book-description">
+                            <p><strong>Un cadáver en una piscina vacía. Un ticket de compra.</strong></p>
+                            <p style="margin-top: 10px;">Mientras su compañero lucha por su vida tras un extraño accidente, Escrihuela destapa una red de corrupción y venganzas dormidas desde los años 80.</p>
+                        </div>
+			<a href="leer_alfarero.html" class="btn btn-gold" style="width: 100%;">Leer Primer Capítulo</a>
+			<a href="https://www.amazon.es/sue%C3%B1o-del-alfarero-SIN-COLECCION/dp/8412262522 " target="_blank" class="btn" style="flex: 1; background: #f0c14b; color: #111; border: 1px solid #a88734; font-size: 0.8rem; padding: 10px; 			font-weight:bold; text-align: center; text-decoration: 			none;">
+        		🛒 Amazon
+    			</a>
+                    </div>
+                </article>
+
+                <article class="book-card" style="border-top: 4px solid var(--color-polvora);">
+                    <div class="book-cover">
+                        <img src="la-polvora.png" alt="Portada Lo que no contó la pólvora">
+                        <div style="position: absolute; bottom: 0; left: 0; background: var(--color-polvora); color: white; padding: 5px 15px; font-size: 0.7rem;">Final de la Saga</div>
+                    </div>
+                    <div class="book-content">
+                        <span class="book-tag" style="color: var(--color-polvora);">Thriller Emocional</span>
+                        <h3 class="book-title">Lo que no contó la pólvora</h3>
+                        <div class="book-description">
+                            <p><strong>El caso más personal. El adiós definitivo.</strong></p>
+                            <p style="margin-top: 10px;">La muerte de Gustavo Calabuig en una cordà destapa un pasado turbulento. Escrihuela, acompañado de Inés Larrauri, busca redención en una historia donde la inocencia no existe.</p>
+                        </div>
+                        <a href="leer_polvora.html" class="btn btn-orange" style="width: 100%;">Leer Primer Capítulo</a>
+			<a href="https://www.amazon.es/Lo-que-no-cont%C3%B3-p%C3%B3lvora/dp/B0F7R4MT9T" target="_blank" class="btn" style="flex: 1; background: #f0c14b; color: #111; border: 1px solid #a88734; font-size: 0.8rem; padding: 10px; font-			weight:bold; text-align: center; text-decoration: 			none;">
+        		🛒 Amazon
+    			</a>
+                    </div>
+                </article>
+
+		<article class="book-card" style="border-top: 4px solid #b91c1c;">
+    		<div class="book-cover">
+        		<img src="rebotica.jpg" alt="Portada Tiempos de rebotica">
+        		<div style="position: absolute; bottom: 0; left: 0; background: #b91c1c; color: white; padding: 5px 15px; font-size: 0.7rem;">
+            		Noir Rural
+        	</div>
+    	</div>
+    
+    	<div class="book-content">
+        	<span class="book-tag" style="color: #b91c1c;">Misterio / Costumbrista</span>
+       		<h3 class="book-title">Tiempos de rebotica</h3>
+        
+        	<div class="book-description">
+            	<p><strong>Un perro en la nieve. Un pueblo que no olvida.</strong></p>
+            	<p style="margin-top: 10px;">A principios de los ochenta, un joven farmacéutico llega a Encinares del Marquesado. El hallazgo de un animal muerto desentierra odios entre caciques, alcalde comunista y familias enfrentadas en un mundo de 		hermetismo y realidad cruda.</p>
+        	</div>
+        
+        	<a href="leer_rebotica.html" class="btn" style="border: 2px solid #b91c1c; color: #b91c1c; width: 100%;">Leer Primer Capítulo</a>
+			<a href="https://www.amazon.es/Tiempos-rebotica-Emilio-Gil-Ibor-ebook/dp/B0C3ZVBQ98" target="_blank" class="btn" style="flex: 1; background: #f0c14b; color: #111; border: 1px solid #a88734; font-size: 0.8rem; padding: 10px; font-weight: 			bold; text-align: center; text-decoration: 			none;">
+        		🛒 Amazon
+    			</a>
+    	</div>
+
+	</article>
+                <article class="book-card coming-soon" style="border-top: 4px solid var(--color-huella);">
+                    <div class="book-cover">
+                        <img src="la-huella.png" alt="Portada La Huella de su Voz">
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(15, 23, 42, 0.9); color: white; padding: 10px 20px; font-weight: bold; border: 1px solid white; z-index: 10; white-space: nowrap;">
+                            PRÓXIMAMENTE
+                        </div>
+                    </div>
+                    <div class="book-content">
+                        <span class="book-tag" style="color: var(--color-huella);">Misterio / Camino de Santiago</span>
+                        <h3 class="book-title">La huella de su voz</h3>
+                        <div class="book-description">
+                            <p><strong>Dos hermanas. Veinte años. Un solo camino.</strong></p>
+                            <p style="margin-top: 10px;">Clara busca a su hermana Marie, desaparecida dos décadas atrás en el Camino de Santiago. Su búsqueda la lleva a Villacelán, un pueblo detenido en el tiempo donde el silencio es la única ley.</p>
+                        </div>
+                        <a href="leer_huella.html" class="btn btn-blue" style="width: 100%;">Leer Primer Capítulo</a>
+                    </div>
+                </article>
+		<article class="book-card coming-soon" style="border-top: 4px solid #0e7490;">
+    			<div class="book-cover">
+        		<img src="el_dia_que.jpg" alt="Portada El día que cerró el mundo">
+        
+       			 <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(153, 27, 27, 0.9); color: white; padding: 10px 20px; font-weight: bold; border: 1px solid #f87171; z-index: 10; white-				space: nowrap; letter-spacing: 2px; font-size: 0.8rem;">
+            		EN ESCRITURA
+        	</div>
+    </div>
+    
+    <div class="book-content">
+        <span class="book-tag" style="color: #0e7490;">Thriller / Conspiración</span>
+        <h3 class="book-title">El día que cerró el mundo</h3>
+        
+        <div class="book-description">
+            <p><strong>Confidencial. Urgente.</strong></p>
+            <p style="margin-top: 10px;">Una historia que aún se está escribiendo. Cuando las fronteras caen y el silencio se impone, solo la verdad puede ser el antídoto.</p>
+        </div>
+        
+        <a href="leer_el_dia.html" class="btn" style="border: 2px solid #0e7490; color: #0e7490; width: 100%;">Leer Primer Capítulo</a>
+    </div>
+</article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bio-section" id="biografia">
+        <div class="container">
+            <div class="bio-grid">
+                <div class="bio-image">
+                    <img src="foto_autor.png" alt="Emilio Gil Ibor, autor">
+                </div>
+                <div class="bio-content">
+                    <span style="color: var(--color-accent); font-weight: bold; letter-spacing: 2px; font-size: 0.8rem;">SOBRE EL AUTOR</span>
+                    <h3>Emilio Gil Ibor</h3>
+                    <p>
+                        Narrador de lo invisible y cronista de las sombras de Valencia. A través de la mirada del inspector Escrihuela, Emilio Gil Ibor ha construido un universo literario donde el thriller policial se funde con la denuncia social y la memoria histórica.
+                    </p>
+                    <p>
+                        Sus obras no solo buscan el culpable, sino entender las cicatrices que el crimen deja en la sociedad y en el alma humana.
+                    </p>
+		    <p>
+ 			Con "Lo que no contó la pólvora" finaliza la saga del inspector Alfonso Escrihuela.
+		    </p>
+		    <p>
+			Tiempos de rebotica abre un universo narrativo nuevo para el autor que lo llena de ilusión.
+		    </p>
+			
+                    <a href="autor.html" style="color: var(--color-ink); font-weight: bold; border-bottom: 2px solid var(--color-ink);">Leer trayectoria completa &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="newsletter" id="contacto" style="background-color: var(--color-ink); color: white; padding: 100px 0; text-align: center;">
+    <div class="container" style="max-width: 600px; margin: 0 auto;">
+        <h2 style="font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 15px;">Contacto</h2>
+        <p style="opacity: 0.8; margin-bottom: 40px;">¿Quieres unirte al círculo de lectores o enviarme un comentario sobre las novelas? Estaré encantado de leerte.</p>
+        
+        <form action="https://formspree.io/f/xpqjzyky" method="POST" style="display: flex; flex-direction: column; gap: 20px; text-align: left;">
+            
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <label style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7;">Tu correo electrónico:</label>
+                <input type="email" name="email" placeholder="ejemplo@correo.com" required 
+                       style="padding: 15px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white; border-radius: 4px;">
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <label style="font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; opacity: 0.7;">Tu mensaje:</label>
+                <textarea name="message" placeholder="Cuéntame qué te han parecido los capítulos..." required
+                          style="padding: 15px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white; border-radius: 4px; height: 120px; font-family: inherit;"></textarea>
+            </div>
+
+            <input type="text" name="_gotcha" style="display:none">
+
+            <button type="submit" class="btn" 
+                    style="background-color: var(--color-polvora); border: none; color: white; padding: 18px; cursor: pointer; font-weight: bold; border-radius: 4px; transition: 0.3s; text-transform: uppercase; letter-spacing: 2px;">
+                Enviar Mensaje
+            </button>
+        </form>
+    </div>
+</section>
+
+<section style="background: #f8fafc; padding: 60px 0; border-top: 1px solid #e2e8f0;">
+    <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
+        <h3 style="font-family: var(--font-serif); color: #64748b; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 30px;">La crítica dice</h3>
+        <p style="font-family: var(--font-serif); font-style: italic; font-size: 1.4rem; color: #1e293b; line-height: 1.6;">
+            "Llama poderosamente la atención la fuerza narrativa y la contundencia de la prosa en las novelas de Gil Ibor."
+        </p>
+        <p style="margin-top: 15px; font-weight: bold; color: var(--color-polvora);">— Paco Marín (Cartagena Negra)</p>
+    </div>
+</section>
+
+
+<script>
+    (function() {
+        let current = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        if(slides.length > 0) {
+            setInterval(() => {
+                slides[current].style.opacity = 0;
+                current = (current + 1) % slides.length;
+                slides[current].style.opacity = 1;
+            }, 5000); // 5 segundos para que de tiempo a apreciar cada portada
+        }
+    })();
+</script>
+
+</body>
+
+<footer style="background: #0f172a; color: white; padding: 40px 0; text-align: center; font-size: 0.9rem;">
+    <div class="container">
+        <p style="opacity: 0.6;">© 2026 Emilio Gil Ibor - Escritor</p>
+        <p style="margin-top: 10px; font-style: italic; opacity: 0.4;">"El violín no hablaba, pero lo había visto todo."</p>
+    </div>
+</footer>
+
+</html>

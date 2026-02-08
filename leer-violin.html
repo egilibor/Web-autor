@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violín Roto | Capítulo 1</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* ESTILO MODO LECTURA (TIPO KINDLE/PAPEL) */
+        :root {
+            --bg-paper: #f9f7f1; /* Crema suave */
+            --text-ink: #2c2c2c; /* Gris muy oscuro (menos agresivo que el negro) */
+            --accent: #d4af37;   /* Dorado Violín Roto */
+        }
+
+        body {
+            background-color: var(--bg-paper);
+            color: var(--text-ink);
+            margin: 0;
+            padding: 0;
+            font-family: 'Merriweather', serif;
+            line-height: 1.9; /* Espaciado generoso */
+            font-size: 19px;
+        }
+
+        /* BARRA DE NAVEGACIÓN */
+        nav {
+            background: white;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: #666;
+            font-family: sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: 0.3s;
+        }
+        .back-link:hover { color: var(--accent); }
+
+        /* CONTENEDOR CENTRAL */
+        .reader-container {
+            max-width: 720px; /* Ancho ideal para lectura */
+            margin: 0 auto;
+            padding: 80px 25px 120px;
+        }
+
+        /* CABECERA DEL CAPÍTULO */
+        header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .book-title {
+            font-family: sans-serif;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin: 0;
+            color: #1a1a1a;
+            line-height: 1.1;
+        }
+
+        /* CUERPO DEL TEXTO */
+        .chapter-content p {
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        /* LETRA CAPITULAR (La primera letra gigante) */
+        .chapter-content > p:first-of-type::first-letter {
+            float: left;
+            font-size: 5.5rem;
+            line-height: 0.75;
+            padding-right: 15px;
+            padding-top: 8px;
+            color: var(--accent);
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* SEPARADOR DE ESCENA */
+        .scene-break {
+            text-align: center;
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin: 50px 0;
+            opacity: 0.6;
+        }
+
+        /* CAJA FINAL (CTA) */
+        .cta-box {
+            background: white;
+            border: 1px solid #e5e5e5;
+            padding: 50px 30px;
+            text-align: center;
+            border-radius: 2px; /* Bordes casi rectos, elegante */
+            margin-top: 80px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .cta-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .btn-buy {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            margin-top: 25px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+        .btn-buy:hover { 
+            background-color: #b45309; 
+            transform: translateY(-2px);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.5rem; }
+            .chapter-content > p:first-of-type::first-letter { font-size: 4rem; }
+            .reader-container { padding-top: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="back-link">← Volver a la web</a>
+    </nav>
+
+    <div class="reader-container">
+        
+        <header>
+            <div class="book-title">Violín Roto</div>
+            <h1>Cabina 203</h1>
+        </header>
+
+        <div class="chapter-content">
+            <p>
+                En la secretaría del conservatorio, dos empleadas charlaban esperando el final de la jornada. En Valencia, el otoño es una época inestable y la amenaza de gota fría, una constante. Tenían prisa por marcharse, espoleadas por el temor al temporal. A esas horas quedaba muy poca gente; las clases terminaban a las ocho y solo en algunas cabinas de ensayo permanecía algún despistado. Poco a poco, los rezagados pasaban por secretaría a cumplir el trámite de devolver la llave, anotar la hora de salida y recuperar el DNI, única forma de mantener el orden en un servicio tan demandado.
+            </p>
+            <p>
+                —¿Sabes si queda alguien por llegar? —preguntó una de ellas, dispuesta a apagar el ordenador.
+            </p>
+            <p>
+                —Falta la llave de la 203. Déjame ver de quién se trata... La rusa.
+            </p>
+            <p>
+                La más veterana se quedó en la secretaría mientras la otra se dirigía al ascensor. El primer relámpago iluminó el corredor de la segunda planta y el trueno posterior retumbó en todo el edificio. Se iban a mojar, y todo por culpa del retraso de aquella alumna. ¿Acaso no les enseñan a ser puntuales en aquellos países?, pensó. Recordó, con fastidio, antiguas historias de disciplina férrea.
+            </p>
+            <p>
+                El estallido de un segundo trueno ahogó su primer grito. El siguiente se escuchó con desgarradora intensidad. La veterana, que ya maldecía la espera, se quedó petrificada. Los papeles que recogía cayeron al suelo y, cuando pudo reaccionar, salió corriendo en busca de su compañera. Los alaridos continuaban resonando en los pasillos, en un eco que iba perdiendo fuerza. En su cabeza se arremolinaban malos presagios mientras subía las escaleras, jadeando por el esfuerzo.
+            </p>
+            <p>
+                Su compañera, con el rostro demudado por el pánico, se apoyaba en la pared situada frente a la puerta de la cabina 203. Se deslizó de espaldas hasta quedar sentada en el suelo. Cuando saltaron los automáticos y las luces de emergencia iluminaron el pasillo, rompió a llorar sin control. Con el brazo extendido, señalaba espasmódicamente la puerta.
+            </p>
+            <p>
+                La chica yacía desmadejada en el suelo. Un charco de sangre, todavía fresca, nacía de su cuello y se extendía hasta el piano de pared, donde había comenzado a acumularse. El muro, salpicado por pequeñas gotas rojas, parecía un lienzo irregular. Junto a ella, el violín reposaba en el suelo con una mancha carmesí tintando la cara del puente enfrentada al cordal. El resto del instrumento permanecía impoluto. Cerca del piano, el arco descansaba sobre el estuche formando un ángulo agudo.
+            </p>
+            <p>
+                La muchacha, con los ojos abiertos, parecía saber que todo había terminado. No era una mirada de sorpresa, más bien la de quien está habituado a la desgracia. Moría sola, como casi siempre había vivido, con los fantasmas que solo el violín conseguía acallar.
+            </p>
+            
+            <div class="scene-break">✻ ✻ ✻</div>
+
+            <p>
+                Vicente Sanchís dirigía una de las orquestas del conservatorio desde hacía más de treinta años y ahora desempeñaba la jefatura de estudios, más por antigüedad que por vocación organizativa. Le faltaba un año para la jubilación y lo ansiaba.
+            </p>
+            <p>
+                Conducía bajo el aguacero que descargaba sobre la ciudad. Valencia es así: meses sin una gota y, de pronto, el cielo se desploma y el tráfico enloquece.
+            </p>
+            <p>
+                Vicente tamborileaba los dedos sobre el volante cuando sonó el móvil. En la pantalla apareció el indicativo del conservatorio. ¿Otra vez agua en el edificio? Desde sus inicios, el inmueble se había encharcado varias veces por problemas estructurales heredados del desarrollo acelerado de esa zona de Valencia, en pleno pelotazo urbanístico.
+            </p>
+            <p>
+                —Dígame —respondió, justo cuando la cola de coches se detenía de nuevo.
+            </p>
+            <p>
+                —Don Vicente, don Vicente… Soy Encarna, la secretaria. Ha ocurrido una desgracia.
+            </p>
+            <p>
+                —Tranquilícese, mujer. No es la primera vez que se nos inunda el sótano.
+            </p>
+            <p>
+                —No, don Vicente, no. No es eso. Hemos encontrado una mujer muerta en las instalaciones. Mi compañera y yo estamos solas y no sabemos qué hacer.
+            </p>
+            <p>
+                Vicente Sanchís apretó el volante hasta que los nudillos se le pusieron blancos. Tenía la mente confundida. Los ojos, hipnotizados por el vaivén del limpiaparabrisas, marcaban un compás de espera que le pareció eterno.

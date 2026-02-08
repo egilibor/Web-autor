@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seres de Cristal | Capítulo 1</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* ESTILO MODO LECTURA */
+        :root {
+            --bg-paper: #f9f7f1; /* Crema suave */
+            --text-ink: #2c2c2c; /* Gris oscuro */
+            --accent: #991b1b;   /* ROJO SANGRE (Identidad de Seres de Cristal) */
+        }
+
+        body {
+            background-color: var(--bg-paper);
+            color: var(--text-ink);
+            margin: 0;
+            padding: 0;
+            font-family: 'Merriweather', serif;
+            line-height: 1.9;
+            font-size: 19px;
+        }
+
+        /* BARRA DE NAVEGACIÓN */
+        nav {
+            background: white;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: #666;
+            font-family: sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: 0.3s;
+        }
+        .back-link:hover { color: var(--accent); }
+
+        /* CONTENEDOR CENTRAL */
+        .reader-container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 25px 120px;
+        }
+
+        /* CABECERA */
+        header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .book-title {
+            font-family: sans-serif;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin: 0;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+
+        /* TEXTO */
+        .chapter-content p {
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        /* LETRA CAPITULAR ROJA */
+        .chapter-content > p:first-of-type::first-letter {
+            float: left;
+            font-size: 5.5rem;
+            line-height: 0.75;
+            padding-right: 15px;
+            padding-top: 8px;
+            color: var(--accent);
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* SEPARADOR DE ESCENA */
+        .scene-break {
+            text-align: center;
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin: 50px 0;
+            opacity: 0.6;
+        }
+
+        /* CAJA FINAL */
+        .cta-box {
+            background: white;
+            border: 1px solid #e5e5e5;
+            border-top: 4px solid var(--accent);
+            padding: 50px 30px;
+            text-align: center;
+            border-radius: 2px;
+            margin-top: 80px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .btn-buy {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            margin-top: 25px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+        .btn-buy:hover { 
+            background-color: #7f1d1d; /* Rojo más oscuro al pasar ratón */
+            transform: translateY(-2px);
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .chapter-content > p:first-of-type::first-letter { font-size: 4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="back-link">← Volver a la web</a>
+    </nav>
+
+    <div class="reader-container">
+        
+        <header>
+            <div class="book-title">Seres de Cristal</div>
+            <h1>De la Mancha a la Huerta</h1>
+        </header>
+
+        <div class="chapter-content">
+            <p>
+                Lejana y olvidada quedaba la bochornosa tarde de julio en que proveniente del pueblo, cargado con una maleta de madera con fondo de cartón y anudada por una correa desgastada por el paso de los años, descendió asustado del tren, en la estación de Aldaia, para cubrir, a pie y junto a sus padres, la distancia que les separaba de Torrent.
+            </p>
+            <p>
+                Ese apeadero era la única referencia que su progenitor llevaba anotada, con letra irregular, en el reverso de la estampa de Santa Águeda, patrona de Pinarejo, y a la que Antonio Almenar había fiado su irresoluto porvenir tras largos años de amagar golpes con el hambre. Hambre suya y de su familia, pero sobre todo hambre y frío que campaban libremente por las ondulantes llanuras de la manchuela conquense durante los crudos meses de invierno.
+            </p>
+            <p>
+                El ansiado verano se sustanciaba en un interminable peregrinaje que podía acabar a las puertas de Andalucía. Segando de sol a sol, encorvado sobre los dorados trigales y durmiendo, la mayoría de veces, al apacible relente del perezoso estío. En ocasiones, si había suerte, deshacía el camino hasta su pueblo enrolado en cuadrillas de vendimiadores de piel quemada y curtida por la abundancia de horas de exposición solar. Cuando Antonio Almenar y su esposa arribaban al dique seco de su pueblo recogían a los niños en casa de los abuelos y, con los escasos ahorros de sus interminables peonadas, se encomendaban a la suerte para intentar sobrevivir durante los siguientes meses. Nueve meses de invierno y tres de infierno, como reza el dicho manchego.
+            </p>
+            <p>
+                Antonio salía de casa temprano, al despuntar la luz tardía del alba invernal, para llegar pronto a la plaza del pueblo. Cargaba con la esperanza de encontrar al capataz de los Osorio, en ocasiones, en busca de brazos fuertes y baratos para rematar alguna tarea. La mayoría de las ocasiones volvía cabizbajo tras esperar algo más de una hora sin resultado alguno.
+            </p>
+            <p>
+                Daba un amplio rodeo por las despedradas calles del pueblo y sin perder de vista el más mínimo movimiento de visillos hurtaba unos cuantos troncos. Uno o dos en cada corral, a lo sumo, para no levantar sospechas, con los que poder prender la lumbre en su hogar. Eso sí, no antes de la hora de comer. La tarde, y en mayor medida la noche, eran las horas más largas y frías.
+            </p>
+            <p>
+                No frecuentaba el bar del pueblo ni para echar la partida pues no podía permitirse el lujo de pagarse un miserable café mezclado con achicoria. En su lugar, caminaba taciturno hasta Santa María del Campo o subía al monte bajo que les unía con Castillo Garcimuñoz; rumiando su huida, planeando cómo desertar de sus raíces, de sus orígenes. Tenía pavor a lo desconocido. No obstante, el mediterráneo le susurraba suavemente al oído. Los cantos de aquella Sibila lejana le prometían un futuro mejor para él y los suyos.
+            </p>
+            <p>
+                Entonces, Antonio lloraba despacio y mudo. Las lágrimas proporcionaban un mínimo e instantáneo calor a sus mejillas para a continuación dibujar helados surcos de escarcha sobre una barba de días. Perder de vista el molino, el campanario de Santa Águeda o la arboleda de Dimas Bermejo le helaba el corazón. Pero tenía que intentarlo; nada podía perder. Si las cosas no le iban bien, el pueblo siempre estaría ahí esperando su regreso. Escribió a un primo de su mujer, pionero en la huida, y fijó el verano siguiente como límite para iniciar el éxodo.
+            </p>
+            <p>
+                Valencia era para ellos la tierra de promisión que ya albergaba a más de un convecino. Los Almenar ansiaban formar parte de la nómina de braceros que la comarca de L’Horta demandaba en una época ansiosa por recuperar la naturalidad que años atrás la guerra civil había interrumpido. Algunos talleres artesanos se estaban convirtiendo en pequeñas fábricas, fundamentalmente de muebles, y eran muchas las puertas donde rezaba el cartel de <em>«se necesita aprendiz»</em>. Valencia era un lugar que intentaba recuperar el pulso, sobre todo la normalidad, y donde faltaba de todo. Una vez comenzaban a cubrirse las necesidades básicas, la gente reclamaba sillas donde sentarse, mesas en las que comer y ropa con la que abrigarse.
+            </p>
+            <p>
+                Bajo ese prisma, la industria del mueble tenía por delante un largo recorrido que, unido a la deficiente mecanización de los procesos productivos, requería de una buena cantidad de mano de obra dispuesta a medio aprender oficios, manejar maquinaria o simplemente, peonar. Así fue como Antonio Almenar se empleó en una fábrica de tresillos. Primero descargando camiones de madera y más tarde torneando patas y brazos para aquellos muebles. Todo así hasta que la crisis del petróleo, muchos años después, lo jubiló prematuramente devolviéndolo a su añorado pueblo con escasa pero suficiente pensión como para esperar tranquilo el fin de sus días. Dichosamente, la vida fue muy benévola con su hijo Florentino, algo que él nunca llegó a comprender, convirtiéndole en un próspero empresario empeñado en que a sus padres nunca les faltase de nada.
+            </p>
+            <p>
+                A su paso por Alaquàs se encontraron con un puñado de gente que despedía el duelo de un entierro en aquella sofocante tarde valenciana. Muchos de ellos con blusas negras o a rayas grises, como correspondía a la indumentaria de los domingos, quejándose del calor y liando algún pitillo de caldo de gallina. Mientras, ellas, enlutadas hasta el moño, cuchicheaban en voz baja sobre las bondades del finado.
+            </p>
+            <p>
+                —<em>Deu ens lliure del dia de les lloances</em> —susurraban en voz baja.
+            </p>
+            <p>
+                El féretro reposaba sobre una piedra desgastada tras décadas de pésames en el lugar conocido como calvario, sobre la linde de un campo de olivos aledaño a la ermita de la Virgen del Olivar. Enfrente, campos y huerta valenciana apuntando hacia el secano situado a las faldas de la sierra Perenchiza. Hasta allí, a las afueras de Alaquàs, se acercaba la mayoría de la gente para mostrar sus condolencias a la familia; el resto del trayecto hasta el cementerio estaba reservado a familiares y gente próxima.
+            </p>
+            <p>
+                La familia Almenar detuvo su andadura. Con respeto no exento de fisgoneo esperó a que terminase la ceremonia. Cuando la escasa comitiva enfiló por el camino viejo de Torrent reanudaron su marcha confundidos como parte del exiguo grupo. A mitad de aquella polvorienta torrentera, transformada en camino, se encontraba el camposanto. Torpemente, los cuatro hombres que portaban el ataúd torcieron a la izquierda para penetrar en lugar sagrado y debido al inoportuno traspiés de uno de ellos, a punto estuvieron de dar con el muerto en el suelo.
+            </p>
+            <p>
+                Florentino, su hermana y sus padres se detuvieron bajo el arco de entrada, tanto por curiosidad como por la imperiosa necesidad de disfrutar de un instante de sombra. El zagal vislumbró bajo el portal un herrumbroso grifo que era utilizado por las mujeres para llenar la regadera con la que saciar la sed de las tristes flores del sacramental. Dejó la maleta en el suelo y se lanzó sin pudor ni consentimiento paterno hasta acoplar su boca al grifo. Sus permanentes mocos se pegaron a la herrumbre amarillo-rojiza en un maridaje escatológico, en ningún caso discordante.
+            </p>
+            <p>
+                Aquel entierro les recordó que la muerte no entiende de pueblos ni lugares, la misma muerte que en esos momentos acechaba tras una fría mira telescópica a la que Florentino era ajeno. Como lo fue la tarde de julio en la que sus cortas entendederas sólo soñaban con un vaso de agua fresca con la que diluir el polvo pegado a su paladar. Torrent ya se divisaba ante ellos. El agua y los robados minutos de sombra les devolvieron la fuerza y presencia de ánimo suficiente para atacar el tramo final del trayecto que les había llevado de la Mancha a la Huerta. Cruzaron el puente sobre el sediento barranco y el soñado «Dorado» de Antonio Almenar comenzó a hacerse realidad ante sus ojos. Por fin habían llegado.
+            </p>
+
+            <div class="scene-break">✻ ✻ ✻</div>
+
+            <p>
+                Muchos años después, tras la mortal retícula del rifle, un rostro joven, poco más allá de la treintena, respiraba lenta y profundamente sin desamparar los erráticos movimientos de Florentino Almenar tras el ventanal de su oficina. Llevaba tiempo planificando aquella acción y no tenía ningún tipo de urgencia. Detrás de un arma de precisión las prisas no son buenas consejeras, más cuando lo normal es que se cuente con una sola oportunidad. Ni siquiera había fijado fecha concreta. La eligió, días antes, al comprobar que esa mañana habría niebla.
+            </p>
+            <p>
+                No podía permitirse el más mínimo error. Bastante dolor le había infligido ya aquel chiquilicuatre. Él no era un sicario, tampoco un asesino, pero era consciente de que, tras terminar con aquello, las cosas nunca volverían a ser igual. Traspasada la delgada línea que separa el bien del mal, el orden natural queda, irremisiblemente, alterado.
+            </p>
+            <p>
+                Ya había matado con anterioridad, uniformado de caqui en el lejano Afganistán, y ese fue un momento que jamás olvidó. El instante en que, por su acción, un anónimo ser humano cayó desplomado como un saco perdiendo la vida ante sus ojos. Aquello era la guerra, y en las guerras matas o mueres. La regla es así de simple.
+            </p>
+            <p>
+                En el polígono industrial abundaban las naves en barbecho, añorantes de tiempos perdidos. Pese a las coreadas voces de recuperación económica que el gobierno no paraba de pregonar, sólo algunas se habían vuelto a alquilar. El muchacho optó por una bastante vieja, ni siquiera tenía puesto el consabido cartel de <em>«se alquila»</em>, sin embargo, desde la ventana pegada al chaflán nacía una línea imaginaria que la unía, sin ningún tipo de obstáculo, con el despacho de Florentino Almenar, a poco más de trescientos metros. Dicho trayecto, por distante que pudiera parecer, no suponía problema alguno para él.
+            </p>
+            <p>
+                Se enroló en el ejército huyendo de la crisis. La idea era pasar dos o tres años esperando a que escampara para volver a la vida civil, tal vez como bombero. Llevaba un tiempo preparándose, pero no habían convocado oposiciones y ni siquiera tuvo la oportunidad de intentarlo.
+            </p>
+            <p>
+                En periodo de instrucción, un recluta con excelentes facultades físicas no pasa desapercibido, ello unido a una nobleza encomiable, encajaba perfectamente en el perfil que el coronel Hidalgo buscaba para engrosar las filas de su Grupo de Operaciones Especiales. El antiguo CIR de Rabasa, actualmente acuartelamiento alférez Rojas Navarrete, acogía a los GOE dentro de la nueva estructura del ejército, donde pronto el muchacho se acostumbró a las duras jornadas de adiestramiento. Perdió la cuenta de las veces que le dio la vuelta corriendo —un perímetro de algo más de dos kilómetros—, ni de las ocasiones en que tuvo que sortear los obstáculos de la pista americana, amén de inagotables jornadas de marcha cargado con todo tipo de equipamiento militar.
+            </p>
+            <p>
+                En todo momento destacó con humildad de entre sus compañeros de armas. Fue sin embargo en el campo de tiro donde, más que destacar, se salió. Su equilibrio interior impedía que rara vez llegara a perder la calma, y esa cualidad lo hacía infalible en el tiro. Se tumbaba en posición, encaraba el visor, ponía la mente en blanco, dejaba sentir el viento en su cara para calcular la deriva del tiro y esperaba paciente a que el disparo le sorprendiera. Los compañeros apostaban, no si sería capaz de hacer blanco, si no a qué distancia dejaría de hacerlo. Aquello le valió el sobrenombre de Robín.
+            </p>
+            <p>
+                Había llegado a la nave abandonada poco antes del amanecer. Amparado en la espesa niebla, que acudió solícita a su cita haciendo buenas las previsiones meteorológicas, y cargado con una larga bolsa de deporte, accedió al recinto por el corral situado en la parte trasera. Gracias a su excelente sentido de la orientación y a la facilidad con la que era capaz de abrir puertas ajenas, los primeros rayos de sol lo sorprendieron en un polvoriento despacho con las paredes desconchadas, cables arrancados y sin una sola bombilla. Hacía frío. Despejó la mesa de amarillentos papeles y desplegó sobre ella un fino tapete verde. Cuanto menos rastro dejara mejor para él, pues de seguro que la policía analizaría la trayectoria de tiro y, más pronto que tarde, daría con aquella estancia.
+            </p>
+            <p>
+                Extrajo de la bolsa su rifle <em>Kelbly</em>, un lujo que se había podido permitir gracias al dinero ahorrado tras su periplo afgano. Había calibrado la mira telescópica con suficiente antelación para la distancia de trescientos veinte metros que la separaban de su objetivo. Actualmente <em>Google Maps</em> permite medir distancias y trazar trayectorias entre dos puntos sin salir de casa, lo que supuso una gran ventaja para Robín. Montó el trípode y realizó una primera comprobación; cuando todo fue de su agrado, se sentó en el suelo a esperar.
+            </p>
+            <p>
+                Llevaba tiempo siguiendo los movimientos de Florentino Almenar, analizando sus rutinas y costumbres. Había escogido un momento para el que todavía restaba más de media jornada. Sería poco después de la anochecida, sobre las seis de la tarde, cuando Florentino entrara en su despacho tras su inquisitorial paseo vespertino por la fábrica. Aquella visita generaba un revoloteo de operarios, los brazos se movían con mayor ímpetu y rapidez superando en velocidad a las máquinas, para después quedar plantados a la espera de un producto que, obviamente y debido a su programación, no podía correr más. Una vez finalizada la ronda, las aguas volvían a su cauce y la producción restablecía su normalidad, despejando los cuellos de botella que la presencia del propietario había provocado.
+            </p>
+            <p>
+                Robín permanecía sentado, quieto, en estado casi letárgico, sumido en una meditación tántrica que siempre le ayudaba a relajarse. Sin embargo, en esta ocasión no le estaba resultando nada fácil. Los pensamientos tendían a escapar a su férrea disciplina mental y las imágenes, unas claras y otras difusas, comenzaban a adueñarse de su mente.
+            </p>
+            <p>
+                La que más se repite se sitúa en el centro de todas ellas. Un hombre, prematuramente avejentado, dejado caer, más que sentado, en un gastado sofá. El sofá de toda la vida del que nunca quiso desprenderse. La cabeza gacha, los ojos vacuos, la mente alejada de la realidad y del presente. Ajeno a cualquier tipo de atención que su entorno, impotente y dolorido, intenta prestarle para estimular su vuelta a la realidad, para recuperar a aquel ser tan bueno y querido que, desde hace pocos años, naufraga a la deriva sin rumbo definido.
+            </p>
+            <p>
+                En aquelarre circular y diabólico, como danzando alrededor de esta imagen central: mujeres ataviadas con el <em>burka</em>, hombres con enormes barbas negras como el carbón y turbantes ceñidos a la cabeza, y desdentados niños correteando sobre el polvo de calles sembradas de escombros.
+            </p>
+            <p>
+                Todo ello contemplado a través del visor del fusil. Ese estrecho túnel que convierte la cruda realidad en un escenario virtual e imaginario, capaz de transformar la guerra en una suerte de video juego competente para amortiguar el sentimiento de culpa cuando, al apretar el gatillo, la mujer del <em>burka</em> se desploma dejando al descubierto un cinturón explosivo. Más tarde, en la litera del acuartelamiento repasa, cuenta y reza a Dios para que aquella lista no continúe engrosándose.
+            </p>
+            <p>
+                El hombre del sofá comienza a llorar, aunque más que llorar, de sus ojos supuran lentas lágrimas sumisas, sin ímpetu, derramadas más por efecto de la gravedad que por dolor o sentimiento alguno. La mujer, sentada a su lado, se tapa los ojos y espera que algún milagro le devuelva a su marido, el hombre siempre alegre que se ha dejado la vida por ella y por sus hijos, el mismo que emprendió un viaje mental del que todavía no ha regresado, y cuyo paradero todos desconocen.
+            </p>
+            <p>
+                La lluvia acababa de hacer acto de presencia y arreciaba con fuerza sobre la cubierta metálica, produciendo un estruendoso repiqueteo dentro de la nave. Debía ser la hora de comer. El muchacho no había cargado con comida alguna; sabía que después de aquello la vomitaría. Sacó de la bolsa la botella de agua y bebió pausadamente. Se acercó a la mesa para comprobar que todo estaba en orden. El <em>Kelbly</em> seguía en su sitio y la trayectoria continuaba firme sobre la ventana del despacho de Florentino Almenar que, en esos momentos, aparcaba su ostentoso Mercedes en la zona reservada. De nuevo las imágenes se volvieron a arremolinar en la mente del joven infundiéndole la determinación necesaria para llevar a cabo su acción. «¿Verdaderamente aquello serviría para algo?» Era una pregunta que se había hecho en multitud de ocasiones y conocía la respuesta. Simplemente, no la había. Si nadie iba a hacer justicia con aquel individuo, él sería el brazo ejecutor de una sentencia que ya había dictado tras muchas reflexiones. Era momento de pasar a la acción.
+            </p>
+            <p>
+                El estallido de un trueno sacó al muchacho de sus elucubraciones y comprobó que Florentino Almenar acababa de entrar en su despacho tras realizar su acostumbrada ronda. Ufano y tras aplicar su consabida máxima de <em>«hacienda, tu amo te vea y si no que te venda»</em>. Encendió un cigarro y subió la persiana de su ventanal para observar la lluvia. Quizás se acordó de su pueblo. De niño le gustaba mirar por las ventanas del colegio mientras llovía sobre aquella llanura desierta, sin más discordancia visual que la arboleda de Dimas Bermejo. Hasta que doña Engracia, la maestra, gritaba su nombre seguido de agudos epítetos nada favorables a su persona.
+            </p>
+            <p>
+                Robín, tras sentarse, apoyó la mejilla sobre la culata, mientras sus poderosas manos asían con firmeza el fusil. Se recreó entre la cabeza y el corazón. Tenía que decidir entre: una discreta mancha sobre el costado izquierdo, que reventaría el órgano con el que dicen que amamos; o el escandaloso desparrame de sesos sanguinolentos del encargado de odiar y urdir las más maquiavélicas acciones. Por fin se decidió. La cabeza de aquel malnacido era la responsable de tanto dolor y lo más adecuado era que no quedase ni rastro de ella. Un rayo iluminó la oscurecida tarde y Robín contó. A la de tres estalló el trueno. La tormenta iba a ser una valiosa aliada para enmascarar el disparo.
+            </p>
+            <p>
+                Un nuevo rayo y comenzó a contar. «Uno… dos…». La puerta del despacho se abrió dando paso a una mujer cargada con varias carpetas y el trueno se volvió a escuchar. Florentino Almenar ni siquiera se dignó a girarse; en sus labios pudo leer una excusa, un «déjelo sobre la mesa», y la mujer abandonó el despacho con celeridad. Incluso desde la distancia, Robín no quería testigos en la muerte de aquel cerdo.
+            </p>
+            <p>
+                Pasaron cinco minutos, la lluvia iba amainando y aquel hijo de puta seguía firme con la mirada perdida en dirección suya: intuyéndolo, animándolo, retándolo con un «no tienes huevos chaval». Otro rayo y, «uno… dos… tres…».
+            </p>
+            <p>
+                Mezclado con el estruendo del último trueno de la tarde, el cristal saltó en mil pedazos hacia el interior del despacho y la figura se desplomó hacia atrás levantando los brazos. Mientras Robín desmontaba rápido y sereno el <em>Kelbly</em>, oteó en la distancia la entrada de varias personas en el despacho de su jefe.
+            </p>
+            <p>
+                Recogió el tapete, dejó de nuevo las viejas facturas sobre la mesa y se colocó, a modo de mochila, la bolsa de deporte sobre la espalda. Desanduvo el camino recorrido antes del amanecer y salió a la calle, no sin antes comprobar que nadie pasaba en aquel momento. Se ajustó la capucha del chándal y comenzó a correr a ritmo de <em>footing</em>.
+            </p>
+            <p>
+                Camino a su pueblo, distante más de una hora de la fábrica de Florentino Almenar, se cruzó con una ambulancia con la sirena puesta. «No corras», pensó, «vas a echar el viaje en balde».
+            </p>
+        </div>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-top: 0;">¿Quién es el verdadero asesino?</h3>
+            <p style="color: #666; font-size: 1rem;">La muerte de Florentino es solo el principio. Entra en la mente de Robín.</p>
+            
+            <a href="index.html#contacto" class="btn-buy">Seguir leyendo</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

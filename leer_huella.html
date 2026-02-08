@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La huella de su voz | Capítulo 1</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* ESTILO CANTÁBRICO / PIEDRA Y MAR */
+        :root {
+            --bg-paper: #f1f5f9; /* Gris azulado muy pálido (frío) */
+            --text-ink: #334155; /* Gris pizarra oscuro */
+            --accent: #475569;   /* AZUL PIZARRA / PIEDRA MOJADA */
+            --memory-bg: #e2e8f0; /* Fondo para los recuerdos */
+        }
+
+        body {
+            background-color: var(--bg-paper);
+            color: var(--text-ink);
+            margin: 0;
+            padding: 0;
+            font-family: 'Merriweather', serif;
+            line-height: 1.9;
+            font-size: 19px;
+        }
+
+        /* BARRA DE NAVEGACIÓN */
+        nav {
+            background: white;
+            border-bottom: 1px solid #cbd5e1;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            text-align: center;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: #64748b;
+            font-family: sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: 0.3s;
+        }
+        .back-link:hover { color: var(--accent); }
+
+        /* CONTENEDOR CENTRAL */
+        .reader-container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 25px 120px;
+        }
+
+        /* CABECERA */
+        header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .book-title {
+            font-family: sans-serif;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin: 0;
+            color: #1e293b;
+            line-height: 1.2;
+        }
+
+        .chapter-subtitle {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--accent);
+            margin-top: 10px;
+        }
+
+        /* TEXTO */
+        .chapter-content p {
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        /* LETRA CAPITULAR PIZARRA */
+        .chapter-content > p:first-of-type::first-letter {
+            float: left;
+            font-size: 5.5rem;
+            line-height: 0.75;
+            padding-right: 15px;
+            padding-top: 8px;
+            color: var(--accent);
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* SECCIÓN DE RECUERDO (FLASHBACK) */
+        .memory-section {
+            background-color: white;
+            padding: 40px;
+            border-left: 4px solid var(--accent);
+            margin: 40px -20px; /* Un poco más ancho que el texto */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        
+        /* SEPARADOR DE OLA */
+        .wave-break {
+            text-align: center;
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin: 50px 0;
+            letter-spacing: 5px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* CAJA FINAL */
+        .cta-box {
+            background: white;
+            border: 1px solid #cbd5e1;
+            border-top: 4px solid var(--accent);
+            padding: 50px 30px;
+            text-align: center;
+            margin-top: 80px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .btn-buy {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            margin-top: 25px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+        .btn-buy:hover { 
+            background-color: #334155; 
+            transform: translateY(-2px);
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .chapter-content > p:first-of-type::first-letter { font-size: 4rem; }
+            .memory-section { margin: 30px 0; padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="back-link">← Volver a la web</a>
+    </nav>
+
+    <div class="reader-container">
+        
+        <header>
+            <div class="book-title">La huella de su voz</div>
+            <h1>La peregrina</h1>
+            <div class="chapter-subtitle">Noviembre de 2005</div>
+        </header>
+
+        <div class="chapter-content">
+            <p>
+                La tarde en que Marie Lemarchand llegó cargada con una mochila azul y aire de peregrina, su silueta, desfigurada por el temporal, se confundió con el color del mar y las nubes, lo que la hacía casi invisible a ojos de cualquiera.
+            </p>
+            <p>
+                Sin embargo, en el pueblo la vieron todos.
+            </p>
+            <p>
+                Ese cuadro otoñal y lluvioso era, para ellos, el telón de fondo de unas vidas condenadas al aburrimiento hasta el punto de que eran capaces de distinguir un pez saltando en las aguas de la bahía. Porque en ese pequeño pueblo asturiano, pegado al Cantábrico, nunca sucedía nada más allá de una cotidianeidad tediosa y lúgubre, sobre todo en esa época del año que comienza con el atraso de los relojes.
+            </p>
+            <p>
+                Caminó como si supiera dónde iba, sin apenas mirar alrededor, ajena a los ojos curiosos que, parapetados tras los visillos amarillentos de las pocas casas habitadas del lugar, acompañaban con morbosa curiosidad su lento caminar. Quizás cruzando apuestas consigo mismos sobre el destino de aquella mujer que acababa de aparecer como salida de la bruma marina.
+            </p>
+            <p>
+                A su izquierda, el viejo malecón protegía la calle de los azarosos embates de un mar que, esa tarde, lanzaba sus olas con furia, como queriendo destruir lo que en siglos nunca había conseguido. A su derecha, una sucesión de viejas casas convergía en la iglesia de San Esteban, moteada de viejo verdín musgoso que el mar había depositado década tras década. Eran mudos testigos del paso de un tiempo que, en Villacelán, parecía no transcurrir.
+            </p>
+            <p>
+                Marie llegó a la puerta de San Esteban calada de arriba a abajo. Ni siquiera el chubasquero con el que intentaba protegerse consiguió cumplir con su mínimo cometido, salvaguardar su precioso cabello dorado, que ahora goteaba como si quisiera rendirse al mar.
+            </p>
+            <p>
+                ¿Qué hacía una peregrina en Villacelán? Para llegar al pueblo tuvo que alejarse bastante de las rutas del Camino, ni siquiera como alternativa figuraba. Por no contar, no contaban ni con albergue ni pensión que pudieran dar cobijo a aquella muchacha de espigada figura, melena rubia y ojos claros que, a vista de buen cubero, no parecía ser española.
+            </p>
+            <p>
+                Como poco, de más allá de los Pirineos.
+            </p>
+            <p>
+                Y estaban en lo cierto. Aunque nadie podía saberlo, Marie tenía veintidós años, y su historia había comenzado mucho antes de que la bruma del Cantábrico borrara su silueta en aquel atardecer.
+            </p>
+
+            <div class="wave-break">~ ~ ~</div>
+
+            <div class="memory-section">
+                <p>
+                    Naciste hace veintidós años en Bayona, fruto del matrimonio entre Édouard Lemarchand y Begoña Susperregui. Un amor trasfronterizo fraguado a golpes de escapadas secretas por parte de dos jóvenes amantes que pronto adivinaron que su destino era estar juntos hasta el final de sus días, ajenos a que la fortuna cumpliría su promesa.
+                </p>
+                <p>
+                    Y fue en Bayona, por premura, por el deseo de estar juntos lo antes posible y disfrutar de sus cuerpos cuando aún no tenían ni oficio ni beneficio. Tu llegada calmó las impetuosas ansias de amor desmedido de tus padres y, aprovechando tu más tierna niñez, entre nanas y biberones, utilizaron ese tiempo para preparar oposiciones a la función pública. Así, cumpliste los dos años en Toulouse, donde fueron destinados Édouard y Begoña, instalados por entonces en un barrio de clase media.
+                </p>
+                <p>
+                    Tu niñez, como más tarde te recordarían, fue feliz. Una niña de cabellos de oro que volvía loco a Édouard, impresionado tanto por tu belleza infantil como por ese carácter que tan bien te definía. Fueron años cálidos, tiernos, que pasaron sin prisas para ti; no tanto para ellos, que veían cómo su niña crecía con más premura de la que hubieran deseado.
+                </p>
+                <p>
+                    En verano pasabais las vacaciones en España. Tu madre, Begoña, añoraba su amada tierra vasca. Una gran aficionada al senderismo, tanto en los montes vasconavarros como junto a los acantilados de ese mar que baña la cornisa cantábrica. Así que, entre ella y las estancias veraniegas, te criaste bilingüe, ventaja que luego te llevó a estudiar Filología Hispánica.
+                </p>
+                <p>
+                    En Irún, el pueblo de tu madre, Iñaki y Ane os esperaban con ansiedad todos los veranos. Una pareja unida a los Lemarchand desde los tiempos en que Édouard y Begoña empezaron a flirtear. Eran algo más que amigos. Eran de la familia. Como eras la única niña, te convertiste en el juguete de aquellos dos matrimonios durante los estíos vascos. Mimándote, consintiéndote cualquier capricho que se te antojase, aunque nunca abusaste de ese privilegio.
+                </p>
+                <p>
+                    Recordabas perfectamente los paseos vespertinos por la playa de la Concha, el olor a mar salvaje, el sabor a sal en tus labios, las correrías con el perro de los vascos, la textura del hueso que te devolvía el can, mezcla de babas y arena, mientras los adultos tomaban un aperitivo en algún chiringuito cercano. Todo mientras el sol amagaba progresivamente y tu piel desnuda comenzaba a sentir los primeros escalofríos que provocaba el frescor del atardecer tardío. Entonces no sabías que aquel verano sería el último tal como los recordabas, como único foco de atención.
+                </p>
+                <p>
+                    Fue una tarde de domingo, después de comer. Tú andabas inmersa en ese proceso en el que las niñas empiezan a sentir ciertos pudores que marcan el comienzo del tránsito de niña a mujer. Tus padres dijeron que tenían que hablar contigo.
+                </p>
+                <p>
+                    —Marie —tomó la palabra tu madre—, los papás tenemos que decirte una cosa muy importante.
+                </p>
+                <p>
+                    Durante la pausa que dejó, apenas un par de segundos, aquel tono, tan formal e inusual a la vez, te puso en alerta. Repasaste en un suspiro qué pudieses haber hecho mal; incluso temiste que tus padres fueran a divorciarse, como les había sucedido a muchas amigas tuyas.
+                </p>
+                <p>
+                    —Dentro de unos meses vas a tener una hermanita, ¿qué te parece?
+                </p>
+                <p>
+                    La primera sensación fue de alivio: ni reprimenda ni divorcio. La segunda, de desconcierto. No por rechazo, sino porque nunca había pasado por tu cabeza esa posibilidad. Siempre diste por hecho que la familia erais vosotros tres, ese núcleo de perfecta armonía que tan bien funcionaba y tanta felicidad mutua os proporcionaba.
+                </p>
+                <p>
+                    Esa noche no dormiste bien. No por tristeza, ni por rabia, ni siquiera por celos, aunque durante el resto del embarazo de Begoña llegarían todos esos matices. Fue más bien una inquietud sin forma, un leve desajuste, como si algo se hubiera desplazado dentro de ti sin avisar y aún no fueras capaz de ponerle nombre. No preguntaste mucho. No quisiste saber de quién había sido la idea, ni por qué justo en ese momento, ni cómo sería. Bastó con oír hermanita para intuir que algo se rompería en la geometría simple y perfecta de vuestra casa.
+                </p>
+                <p>
+                    Y llegó el día. Metida en un canastillo, la portaba tu padre con orgullo, y con la mano libre aferrada firmemente a la tuya, Clara entró en casa y se incrustó en la familia con la mayor naturalidad del mundo. Bastó con que Édouard dejara el moisés encima del sofá y te animara a tocarla con cariño, para que todo cambiara sin estridencias.
+                </p>
+                <p>
+                    [...] Fueron años bonitos. Lo que pasaba en casa comenzaba a importarte menos, casi nada. Clara ya acudía a la guardería y tú entraste en la universidad cargada de ilusión. Orgullosa, creyéndote ya una mujer adulta con ganas de comerte el mundo y respirando, por fin, aires de libertad. La pequeña ya era cosa de tus padres. La vida seguía su curso tranquila, previsible y plena de normalidad.
+                </p>
+                <p>
+                    —Marie —dijo tu padre—, los papás pensaban ir mañana a Burdeos. Un amigo mío expone sus pinturas en una galería de arte. Ya sé que es sábado, e igual has quedado para salir, pero nos harías un gran favor quedándote a cargo de Clara.
+                </p>
+                <p>
+                    No te hizo mucha gracia, pero el curso estaba tocando a su fin, y aprovechar la tarde del sábado para estudiar un rato no te iba a venir nada mal. La peque ya tenía cinco años, y con ponerle dibujos en la tele, darle la merienda, de cenar y acostarla a su hora bastaba. Ibas a tener tiempo suficiente para repasar algunos temas.
+                </p>
+                <p>
+                    Clara ya dormía y tú habías alquilado una película en el videoclub del barrio. No has olvidado nunca el título: <em>El efecto mariposa</em>. Qué paradoja. Sonó el timbre, y al principio te sobresaltaste, pero enseguida pensaste que tus padres se habrían dejado las llaves, aunque era demasiado pronto. Habían dicho que cenarían en Burdeos, y el trayecto hasta casa llevaba algo más de una hora.
+                </p>
+                <p>
+                    Miraste por la mirilla de la puerta y se te heló la sangre. Dos gendarmes, distorsionados por el cristal, aguardaban en el rellano. Las piernas te fallaron, hasta casi caer al suelo. Tu hermana lloró reclamando tu presencia; tú también comenzaste a llorar mientras abrías, con pavor, la puerta.
+                </p>
+                <p>
+                    —¿Es esta la casa de la familia Lemarchand? —preguntó uno de ellos, mientras su compañera se adelantaba para sujetarte, por si perdías el conocimiento.
+                </p>
+                <p>
+                    No esperaste más. Diste media vuelta camino de la habitación de Clara, que había aumentado el volumen del llanto. Los policías entraron tras de ti y esperaron en el recibidor a que volvieras. Era evidente adónde habías ido. Apretándola contra tu pecho, te vieron entrar en el salón. La película seguía su curso, ajena a la tragedia. Clara comenzó a calmarse, como si presintiera, también ella, el hachazo que estaba a punto de caer sobre las dos. No habrías soportado aquella situación sin la calidez de su cuerpo, que, ignorando a los gendarmes, solo tenía ojos para ti.
+                </p>
+                <p>
+                    Aquella fue la última vez que alguien pronunció tu nombre con normalidad. Desde entonces, solo quedó el eco.
+                </p>
+            </div>
+
+            <div class="wave-break">~ ~ ~</div>
+
+            <p>
+                Refugiada bajo el pórtico de la iglesia de San Esteban mientras el temporal arreciaba con violencia, Marie empujó la puerta entornada para acceder al templo.
+            </p>
+            <p>
+                —Te rogamos, óyenos.
+            </p>
+            <p>
+                Fueron las primeras voces susurradas que escuchó mientras se quitaba el chubasquero y estrujaba su melena en un vano intento por enjuagarla. No más de media docena de viejas respondía a las plegarias del sacerdote, y a ninguna de ellas le pasó desapercibida la presencia de la joven, como si tuvieran ojos en la espalda. Tampoco la ignoró el sacerdote —este sí, sin esfuerzo alguno, la vio de frente, desde el púlpito— que, al finalizar el salmo y mientras volvía al altar, cruzó su mirada con Marie. Fue una mirada de piedad que lo llevó a preguntarse qué hacía esa criatura en Villacelán en una tarde tan tempestuosa, asumiendo de inmediato que lo que necesitaba era ayuda. Bastó esa mirada para que Marie entendiera que debía esperar a que terminase la ceremonia. Él la iba a ayudar.
+            </p>
+            <p>
+                El sacerdote pronunció el «Podéis ir en paz» y, tras la preceptiva genuflexión, se encaminó hacia la sacristía, seguido de una mujer veinte años más joven que él. A la par, el coro de beatas desfiló por el pasillo central del templo, pasando junto a Marie sin disimular su curiosidad, con miradas descaradas, como quien observa un bicho extraño con lupa de aumento. Marie apenas se percató de cómo fisgoneaban su rostro, todavía perlado por el agua que seguía cayendo de su pelo, centrándose en recuperar un mínimo calor que la rescatara del frío que había traído del exterior.
+            </p>
+            <p>
+                Don Julián la esperó en la sacristía, con la casulla todavía puesta y las manos cruzadas a la altura del vientre. Cuando Marie se acercó, él no dijo nada. Solo la miró con esa misma expresión serena que había dejado caer sobre ella desde el púlpito, como si su presencia no le sorprendiera, como si la hubiese estado esperando.
+            </p>
+            <p>
+                —Te has mojado mucho —afirmó al fin, en un tono más paternal que inquisitivo.
+            </p>
+            <p>
+                Marie asintió sin hablar. El cura inclinó la cabeza con un leve gesto de comprensión, y miró a la mujer que lo acompañaba.
+            </p>
+            <p>
+                —Emilia, ¿por qué no preparas algo caliente para la muchacha?
+            </p>
+            <p>
+                La mujer desapareció por una puerta lateral sin pronunciar palabra. Don Julián volvió a mirarla, esta vez con un matiz más terrenal.
+            </p>
+            <p>
+                —No sé si tienes un lugar donde dormir esta noche, pero si no lo tienes, en la casa Abadía sobra espacio. Mi hermana y yo vivimos allí. No es un sitio lujoso, pero está seco y hay mantas.
+            </p>
+            <p>
+                Marie lo miró como se mira un refugio. Asintió de nuevo. No necesitaba más.
+            </p>
+            <p>
+                Don Julián colgó la casulla con lentitud, como si cada pliegue tuviera su lugar exacto. Luego tomó una pequeña lámpara de aceite de la repisa y le indicó que lo siguiera. Caminaron en silencio por un pasillo estrecho que desembocaba en el patio trasero de la iglesia. La lluvia había amainado, pero el cielo seguía plomizo. La casa Abadía se alzaba unos metros más allá, discreta y sombría, con las contraventanas cerradas y una luz encendida en la cocina.
+            </p>
+            <p>
+                —Aquí nadie molesta a nadie —dijo el cura mientras abría la puerta—. Si necesitas quedarte unos días, puedes hacerlo. Emilia no habla mucho, pero cocina bien.
+            </p>
+            <p>
+                Marie cruzó el umbral sin decir palabra.
+            </p>
+            <p>
+                El silencio de Villacelán empezó a hacer su trabajo.
+            </p>
+        </div>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-top: 0;">¿Qué secreto esconde Marie?</h3>
+            <p style="color: #64748b; font-size: 1rem;">Veinte años después, su hermana Clara vendrá a buscar respuestas.</p>
+            
+            <a href="index.html#contacto" class="btn-buy">Avísame cuando se publique</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El sueño del alfarero | Capítulo 1</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* ESTILO NOIR / SOBRIO */
+        :root {
+            --bg-paper: #fcfcfc; /* Blanco casi puro, más frío */
+            --text-ink: #1a1a1a; /* Negro intenso */
+            --accent: #1a202c;   /* NEGRO CARBÓN (Identidad de Alfarero) */
+            --prologue-bg: #f3f4f6; /* Gris muy suave para el prólogo */
+        }
+
+        body {
+            background-color: var(--bg-paper);
+            color: var(--text-ink);
+            margin: 0;
+            padding: 0;
+            font-family: 'Merriweather', serif;
+            line-height: 1.9;
+            font-size: 19px;
+        }
+
+        /* BARRA DE NAVEGACIÓN */
+        nav {
+            background: white;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            text-align: center;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: #666;
+            font-family: sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: 0.3s;
+        }
+        .back-link:hover { color: var(--accent); }
+
+        /* CONTENEDOR CENTRAL */
+        .reader-container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 60px 25px 120px;
+        }
+
+        /* PRÓLOGO (Estilo diferenciado) */
+        .prologue-box {
+            background-color: var(--prologue-bg);
+            padding: 40px;
+            margin-bottom: 80px;
+            border-left: 4px solid var(--accent);
+            font-size: 0.95em;
+            color: #4b5563;
+        }
+        .prologue-title {
+            font-family: sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+        .prologue-signature {
+            margin-top: 30px;
+            font-style: italic;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        /* CABECERA LIBRO */
+        header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .book-title {
+            font-family: sans-serif;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin: 0;
+            color: var(--accent);
+            line-height: 1.2;
+        }
+
+        /* TEXTO */
+        .chapter-content p {
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        /* LETRA CAPITULAR NEGRA */
+        .chapter-content > p:first-of-type::first-letter {
+            float: left;
+            font-size: 5.5rem;
+            line-height: 0.75;
+            padding-right: 15px;
+            padding-top: 8px;
+            color: var(--accent);
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* SEPARADOR DE ESCENA (Más sobrio) */
+        .scene-break {
+            text-align: center;
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin: 50px 0;
+            letter-spacing: 10px;
+        }
+
+        /* CAJA FINAL */
+        .cta-box {
+            background: white;
+            border: 2px solid var(--accent);
+            padding: 50px 30px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .btn-buy {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            margin-top: 25px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+        .btn-buy:hover { 
+            background-color: #000; 
+            transform: translateY(-2px);
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .chapter-content > p:first-of-type::first-letter { font-size: 4rem; }
+            .prologue-box { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="back-link">← Volver a la web</a>
+    </nav>
+
+    <div class="reader-container">
+        
+        <div class="prologue-box">
+            <div class="prologue-title">Prólogo</div>
+            <p>
+                Estimado lector, <em>El sueño del alfarero</em> es la tercera novela que publica Emilio Gil Ibor. Sus dos novelas anteriores, novelas que de refilón se mencionan aquí, <em>Violín roto</em> y <em>Seres de cristal</em>, tienen en común con esta una terna de protagonistas principales: los policías Alfonso Escrihuela y Gustavo Calabuig acompañados del médico forense, Antonio Daud.
+            </p>
+            <p>
+                En cada una de ellas, el autor plantea cuestiones de interés y actualidad. <em>Violín roto</em> recoge la problemática de adopción de niños ucranianos después del desastre de Chernóbil. En <em>Seres de cristal</em> el acoso laboral es el hilo conductor de la historia y, en la novela que tiene en las manos para comenzar a leerla, se plantea una trama de venganza personal.
+            </p>
+            <p>
+                He de confesar que desde hace muchos años lo que me interesa personalmente es descubrir autores desconocidos y, en la medida de lo posible, acompañarlos en este difícil camino que es el publicar y llegar a los lectores. Eso ha ocurrido con Emilio. Lo descubrí de forma casual en 2018, acompañado de Alfonso, Gustavo y Daud. Desde ese momento espero con ansiedad su siguiente publicación.
+            </p>
+            <p>
+                De la reseña que ese año hice de <em>Violín roto</em> destaco: «Llama poderosamente la atención la fuerza narrativa y la contundencia de la prosa. Al leerla resulta muy difícil pensar que es la primera obra…». En 2019 comenté de <em>Seres de cristal</em>: «De nuevo, tenemos ante nosotros un desarrollo magistralmente armonizado y perfectamente ensamblado». En <em>El sueño del alfarero</em> encontramos la fuerza narrativa y una prosa contundente en una historia perfectamente estructurada, amén de unos diálogos magistrales por la naturalidad de los mismos… con guiños, por distintas razones, personales a Calabuig y Escrihuela.
+            </p>
+            <p>
+                Acabo citándome: Poco a poco, Emilio Gil Ibor, va encontrando su lugar en el panorama de la novela negra/policiaca/misterio. Más de uno que se autodenomina escritor quisiera tener la contundencia y profesionalidad de Emilio en sus novelas.
+            </p>
+            <div class="prologue-signature">
+                Paco Marín<br>
+                <span style="font-weight: normal; font-size: 0.85em;">Director de Contenidos de Cartagena Negra</span>
+            </div>
+        </div>
+
+        <header>
+            <div class="book-title">El sueño del alfarero</div>
+            <h1>Capítulo 1</h1>
+        </header>
+
+        <div class="chapter-content">
+            <p>
+                Aparentaba bastantes más años de los que tenía. Una enorme verruga descollaba en su mejilla izquierda a un centímetro del inexistente bigote. Los ojos pequeños, quizá empequeñecidos por efecto de los cristales de unas gafas de montura de pasta, le concedían un aire despierto, bondadoso, casi cómico.
+            </p>
+            <p>
+                Cubría la cabeza con un pañuelo blanco cruzado por dos líneas paralelas en los bordes, azul oscuro y claro, una gruesa y otra fina. Remataba cada una de las esquinas en sendos nudos cuya misión era asegurar el sudadero a la cabeza. La tela, que de madrugada debió salir blanca de casa, a esas horas de la tarde se mimetizaba con el color de la tierra, ese polvo de arcilla que flotaba en el aire al trasluz del ventanuco, formaba una fina capa en el piso del taller y brotaba de cualquier parte sin mediar permiso de nadie. Del único lugar de donde no salía por voluntad propia era de los pulmones del abuelo.
+            </p>
+            <p>
+                Aquel rostro no le era extraño; lo recordaba de una vieja fotografía con uniforme de guardiamarina, aunque en realidad era de músico. Blanco para distinguirlo del azul marino de la otra banda de la localidad; azules y rojos, muy propios de su época. Cargaba con un fagot, sentado en una silla de enea en el corral de su alfarería, al parecer posando para la ocasión. Se decía que también tocó el saxo tenor e incluso que era propietario de un ajado violín que prestó a la hija de un amigo, estudiante en el conservatorio de música de Madrid, y que nunca le fue devuelto.
+            </p>
+            <p>
+                Sobre la platina de su torno descansaba un tocho de barro acabado de recoger en la balsa de decantación donde la tarde anterior su hijo había pastado con los pies el agua y la arcilla. La justa y necesaria para obtener una mezcla homogénea, ajustada a una fórmula guardada y transmitida, de generación en generación, desde hacía cerca de trescientos años.
+            </p>
+            <p>
+                Una gruesa gota de sudor, nacida de su arrugada frente, salvó el puente de unas gafas de cristales sucios de polvo de siglos, y tras resbalar perezosa por el arco de su nariz fue a estrellarse contra el suelo, donde un pequeño y perfecto cráter brotó sobre la pátina de arcilla que ocupaba toda la estancia.
+            </p>
+            <p>
+                El viejo empujó el volante con el pie, primero despacio, como le habían enseñado de niño, hasta alcanzar un ritmo constante. Asió el mazacote con firmeza no exenta de delicadeza, y la arcilla comenzó graciosa a crecer. El abuelo fijó la vista en su cometido. Serio, firme y meticuloso, enfrascado en la labor de ayudar a nacer la cazuela, una más de las tantas que sus manos habían parido. Cazuelas y pucheros que tras habitar en el horno unos cuantos días aguantarían el calor de lumbres ansiosas de guisos y cocidos. El anciano parecía oler los aromas mientras se afanaba en lo suyo: crear.
+            </p>
+            <p>
+                Una joven, más bien una muñeca de porcelana traslúcida como el esmalte, retrepada sobre un taburete de tres patas, enfrentaba el torno fascinada, mientras observaba, junto al niño que debió ser Escrihuela, brotar magia de las manos del alfarero. Un ruido vino a romper la asombrosa quietud vespertina. El viejo levantó la vista, e ignorando a la pareja de mirones, se limpió los mocos en la manga diestra de la camisa y después continuó a lo suyo.
+            </p>
+            <p>
+                Debió ser un gato al tropezar con alguna de las numerosas piezas expuestas al secado sobre las baldas de madera o, al menos, es lo que pensó el chico algo asustado. Otro sonido, que el viejo no pareció escuchar, puso en guardia al Escrihuela adulto. Del oscuro rincón que conducía a la mufla, una mano enguantada empuñando una pesada pistola apuntaba a la cabeza del alfarero que seguía ajeno a su entorno, ensimismado en la pieza que crecía ante él. Gritó para advertir al anciano, se afanó en desenfundar el arma que nunca llevaba encima e intentó interponerse en la trayectoria del proyectil; pero voz, manos y piernas se negaron a satisfacer sus deseos. El alfarero levantó la cabeza y aquellos pícaros ojos sonrieron a los chicos con dulzura, mientras la bala, tras atravesar limpiamente el puchero, porque ya no era cazuela lo que giraba ante él, impactó en medio de su frente.
+            </p>
+            <p>
+                Luego, silencio osco, punzante y triste. En el suelo, una discordante amalgama de sangre y greda acunaba la cabeza del anciano. Apretada contra su pecho, vestida por completo de blanco y, extrañamente, sin mácula de suciedad, estaba la muñeca, su muñeca. En el aire, danzando entre las motas de polvo al contraluz, un deseo: búscalo Alfonso, encuéntralo y haz justicia; ya sabes, aquello no se lo mereció mi niña. Entonces y solo entonces, una lágrima resbaló por la mejilla del viejo abriéndose paso entre la arcilla pegada desde siempre a su rostro.
+            </p>
+
+            <div class="scene-break">◆ ◆ ◆</div>
+
+            <p>
+                El inspector Alfonso Escrihuela se despertó confuso y despistado. El sol todavía no manchaba la pared opuesta del dormitorio cuando gracias al resplandor de la pantalla del móvil vislumbró a Raquel, su mujer, durmiendo con el semblante plácido. Antes de echar pie a tierra se quedó un instante mirándola con admiración y ternura. Sabía que no volvería a conciliar el sueño por mucho empeño que pusiese. Poco a poco se incorporó confirmando lo agotado que estaba. Aquel sueño tan vívido le iba a fastidiar el día. El realismo de las imágenes todavía martilleaba su mente en una pelea por descifrar su significado. La petición del anciano, suspendida sobre el taller de alfarería, lo había alterado. ¿Qué señal escondía aquella quimera? Apoyándose en las paredes del pasillo, con las luces apagadas por no molestar a los demás y la próstata con la sirena puesta, llegó medio a trompicones hasta el cuarto de baño. El espejo le devolvió la imagen del sexagenario recién estrenado que ya era: sin afeitar, pelo alborotado, y un semblante cansado producto de la pesadilla recién abandonada. «Pues yo me veo como siempre», balbució mientras el vaho comenzaba a adueñarse del estrecho pero funcional aseo, sin bañera y con ducha adaptada para un por si acaso que ya acechaba.
+            </p>
+            <p>
+                «¡Y una leche como siempre!, estas harto de verte y no te das cuenta; poca diferencia hay de un día a otro, pero fíjate bien… ¿lo ves?, es tu padre cuando tenía… ¿cuántos?, ¡ahora sí, vale!». El agua, muy caliente, a su gusto, le golpeó con fuerza la nuca.
+            </p>
+            <p>
+                Como era su costumbre, tras la ducha se enfrentó al cola-cao nuestro de cada día. Hacía cerca de treinta años que había abandonado la costumbre, adquirida en su etapa manchega, de desayunar un carajillo para combatir el frío que bajaba, pegado al río, desde la serranía hasta la ciudad de las Casas Colgadas. En ese primer destino, antes de su traslado a València y que ocupó la primera década laboral de su vida, Escrihuela podía acostarse tarde, achispado o tras vigilar a cualquier delincuente de poca monta y, sin importar cuál hubiera sido el exceso, el carajillo aquel le volvía a poner las pilas. A buenas horas iba a funcionar en la actualidad el remedio si un miserable mal sueño era capaz de fastidiarle el día. Así que, quisiera o no, lo que tocaba como cualquier lunes que se precie de serlo, era poner rumbo al trabajo y dejarse de disquisiciones.
+            </p>
+
+            <div class="scene-break">◆ ◆ ◆</div>
+
+            <p>
+                El despacho estaba helado. Los primeros fríos se mostraban sobre una València que cada vez alargaba más los periodos estivales deglutiendo, hasta casi dejar en anécdota, la estación más melancólica del año. ¡Y aún había quien negaba la existencia del cambio climático!
+            </p>
+            <p>
+                Dos pasos le bastaron para alcanzar una mesa sin papeles, aburrida y vacía de expedientes criminales desde hacía casi un año, algo que a todas luces Escrihuela estimaba de buen grado. Ya no sentía la necesidad de escarbar entre crímenes y quebrantos, si es que alguna vez la sintió. Para él, y sobre todo en su oficio, la falta de novedades siempre eran buenas noticias.
+            </p>
+            <p>
+                Mientras encendía el ordenador vio cómo se acercaba a su cubículo con paso firme el comisario. Sobre unos diez años más joven que él, alto, bien parecido y de cuidados modales, como correspondía a una generación de policías nacida al abrigo de la democracia. Hombre de buen trato y tacto, astuto, zalamero y con una brillante carrera por delante. Seguro que no duraría mucho en la comisaría. Escrihuela sabía por experiencia que las esporádicas visitas que este le dispensaba siempre venían a alterar la paz de sus dominios. Veríamos esta vez de qué iba la cosa.
+            </p>
+            <p>
+                —Buenos días, Escrihuela —saludó con voz dulzona mientras tomaba asiento frente al inspector, como el que llega a casa y se deja caer en su propio sofá—, no parece que hayas descansado muy bien esta noche, ¿te ocurre algo?
+            </p>
+            <p>
+                —He dormido poco y mal, y a mi edad nada es como antes, me cuesta un mundo recuperarme de la más nimia eventualidad. Tranquilo que a ti también te llegará. ¿Qué te trae por aquí tan temprano?
+            </p>
+            <p>
+                —¿Hombre, Alfonso, no puede uno pasar a saludar a sus colaboradores?
+            </p>
+            <p>
+                El inspector se le quedó mirando con aire desconfiado; su jefe había puesto en marcha la maniobra envolvente, así que decidió acortar.
+            </p>
+            <p>
+                —Juncos, al grano, que nos conocemos muchos años y tú eres de los que no da puntada sin hilo.
+            </p>
+            <p>
+                Cabeceó paciente el superior. Perspicaz el inspector, siempre en guardia y al quite; así es como debía ser y así lo quería el jefe.
+            </p>
+            <p>
+                —Si por no dar puntada sin hilo te refieres a que no me gusta perder el tiempo, llevas razón. El subcomisario Troncoso se jubila a final de febrero, supongo que ya lo sabes —sin esperar respuesta detuvo su exposición, se levantó y se acercó a la ventana con los brazos cruzados a la espalda. Escrihuela lo siguió con la mirada sin intención de soltar palabra y con el corazón encogido. No albergaba ambición profesional alguna en su última etapa laboral—, y he pensado que tú serías el policía adecuado para cubrir esa vacante, ¿cómo lo ves?
+            </p>
+            <p>
+                —¿Es una orden, señor? —y sonó, sin pretenderlo, algo brusca la respuesta en forma de pregunta—, disculpa, no me he expresado del modo más adecuado.
+            </p>
+            <p>
+                —No seas borde, Alfonso —respondió mostrándose de frente y al contraluz—, claro que no es una orden, es un favor que te estoy pidiendo. Sabes de sobra qué es lo que necesito, y alguien tiene que cubrirme la espalda. Tú eres la persona con la experiencia suficiente para cumplir el cometido sin que el cargo se le suba a la cabeza. Ya sabes lo exaltados que pueden llegar a ser esos jóvenes inspectores. Mi día a día está repleto de obligaciones burocráticas y representativas que me impiden estar al corriente de todo lo que se cuece en esta comisaría.
+            </p>
+            <p>
+                Escrihuela se acarició el mentón, y al apretar la barbilla entre índice y pulgar el hoyuelo que la divide se hizo más evidente. Cegado por la luz de su propia ventana bajó la mirada, del comisario a la mesa, calibrando la astucia política de su superior.
+            </p>
+            <p>
+                —Supongo que me darás un tiempo para pensarlo, ¿no?
+            </p>
+            <p>
+                —Ya te he dicho que Troncoso se jubila, así que antes de esa fecha espero tener el tema cerrado; quiero pasar unas Fallas tranquilas.
+            </p>
+            <p>
+                —Mira, si te he de ser sincero, comisario, creo que aquí hay gente que lo haría muy bien. Inspectores más jóvenes y preparados, con un recorrido más acorde a las necesidades del servicio; yo ya he entrado en la recta final de mi carrera, en el mejor de los casos, cuatro o cinco años a lo sumo.
+            </p>
+            <p>
+                —Pues eso, suficiente. No pensarás que me voy a eternizar en este puesto. Necesito que alguien de tu experiencia cubra mis espaldas ese tiempo que tú dices; nada más.
+            </p>
+            <p>
+                —¿Me puedo negar?
+            </p>
+            <p>
+                —Alfonso, no seas gilipollas. ¿Has pensado que esos años de subcomisario te van a arreglar la jubilación?
+            </p>
+            <p>
+                —Está bien, lo estudiaré.
+            </p>
+            <p>
+                —Como quieras. Por cierto, nos han enviado una nueva auxiliar administrativa. Va a trabajar aquí, en vuestra sección. Hazme el favor de estar al tanto, quiero decir, que te encargues de integrarla en el equipo.
+            </p>
+            <p>
+                —¿Está tonta o qué? —preguntó mientras Juncos abandonaba el despacho sin siquiera girarse ni responder.
+            </p>
+
+            <div class="scene-break">◆ ◆ ◆</div>
+
+            <p>
+                Al Bar Manolo, a escasos metros de las dependencias policiales, se le conoce en el barrio como la Madera, ya que más que un local público parece la cantina de la comisaría, sobre todo por las mañanas, en especial a las horas del almuerzo y la comida. En la puerta, apurando un cigarrillo, el subinspector Gustavo Calabuig esperaba impaciente a su compañero y amigo, el inspector Escrihuela, para cumplir con su inveterada costumbre de almorzar juntos.
+            </p>
+            <p>
+                —Mala cara traes hoy, compañero, ¿tan buenas han sido las noticias de su señoría? —preguntó tirando la colilla a un lado y abriéndole la puerta del bar al inspector—, lo he visto salir de tu despacho hace un rato y se le veía contento, por eso pregunto.
+            </p>
+            <p>
+                —Gustavo, no empecemos el día con tus ironías, ¡vale! ¿Tanto te costaría hacerte el pelo y afeitarte para venir a trabajar?, no sé cuántas veces te lo tengo que decir, cualquier día se va a confundir el guardia de la puerta y en lugar de saludarte te va a meter en el calabozo, ¡desastre, que eres un desastre!
+            </p>
+            <p>
+                —Pero qué pelo quieres que me haga si apenas tengo.
+            </p>
+            <p>
+                —Pues eso, recórtate el que te queda a los lados; pareces… ¡Yo qué sé! Haz lo que te salga de los cojones, Gustavo, está visto que no voy a poder contigo.
+            </p>
+            <p>
+                —No pudo mi madre… —añadió con una sonrisa.
+            </p>
+            <p>
+                De camino a la barra para pedir el condumio, Escrihuela se sintió más observado de lo habitual, miradas pícaras, comentarios en voz baja y saludos jocosos y reverentes, extremo que a Calabuig tampoco le pasó inadvertido.
+            </p>
+            <p>
+                —¿Y a estos que les ocurre hoy? —preguntó el subinspector—, los veo muy graciositos para ser lunes.
+            </p>
+            <p>
+                —Siéntate que ahora te cuento, pero lo primero es almorzar. Tengamos la fiesta en paz.
+            </p>
+            <p>
+                Calabuig enfrentó su habitual ración de bacalao frito, dos trocitos, no más, de los que al final sobraría la mitad, con una cucharadita de ajo aceite. Aquel alimento era el único producto del mar que toleraba. Según él, los demás le producen alergia. Eso sí, de la cerveza, con mucha espuma como le gustaba, no se dejaría nada. Cuando Escrihuela terminó con el medio bocadillo de sepia a la plancha aderezado con aceite y perejil, Calabuig hizo señas al camarero para que les sirviesen los cafés y vaqueritos.
+            </p>
+            <p>
+                —¿Ya está usted en condiciones, inspector? —preguntó con desfachatez y retranca—, o esperamos a que te haga la digestión.
+            </p>
+            <p>
+                —Gustavo, ¿nos tocó la lotería del Niño?, te veo muy contento y graciosillo esta mañana.
+            </p>
+            <p>
+                —Ni la pedrea, compañero, pero a ti parece que te haya picado un panal de abejas, la reina Juncos incluida.
+            </p>
+            <p>
+                Levantó Escrihuela la mirada y, condescendiente, aflojó una sonrisa amable. Comparar al comisario con la abeja reina, le hizo gracia. En cierto modo, la comisaría parecía muchas veces una colmena, también con sus zánganos y obreras.
+            </p>
+            <p>
+                —Sabrás que Troncoso se jubila, ¿no? —comenzó Escrihuela mientras removía el azúcar en la taza.
+            </p>
+            <p>
+                —¡No jodas, Alfonso!, ¿no me digas que te ha tocado la lotería sin jugar?, ahora me explico el runruneo que nos ha acompañado al entrar. Parece ser que en esta ocasión nos hemos enterado los últimos, como los cornudos. ¿Tengo que darte la enhorabuena?
+            </p>
+            <p>
+                —O el pésame, Gustavo. No me hace ninguna gracia. Tener que lidiar con esto no va a traer más que problemas con compañeros más jóvenes y ambiciosos que están deseando hacerse con el puesto. No has visto las miradas al entrar, y eso que no he tomado ninguna decisión.
+            </p>
+            <p>
+                —¿Qué pésame?, ¿no has aceptado aún?
+            </p>
+            <p>
+                —Gus, más que un cargo estoy pensando en acogerme al programa ese de jubilación anticipada por años de servicio o como quiera llamarse. ¿A ti que te quedan, dos?, nos retiramos a la vez y a visitar obras por Alaquàs.
+            </p>
+            <p>
+                —Ya, pero hay un pero, ¿no?
+            </p>
+            <p>
+                Escrihuela apuró el café y dio el primer sorbo al vaquerito. Despacio afirmó con la cabeza.
+            </p>
+            <p>
+                —Juncos, ¿no es así?
+            </p>
+            <p>
+                —Me lo ha pedido como un favor, y ya sabes que sus deseos son órdenes. No está acostumbrado a que nadie le niegue nada. Es un arribista sin escrúpulos.
+            </p>
+            <p>
+                —Y el único que puede oponerse, por necesidades del servicio, a tu solicitud de jubilación anticipada, ¿no?
+            </p>
+            <p>
+                —Efectivamente.
+            </p>
+            <p>
+                —Pues lo tienes crudo, compañero. Ajo y agua, como en los viejos tiempos.
+            </p>
+            <p>
+                Notó Escrihuela la vibración del móvil, ya que oírlo en medio de aquel jaleo de conversaciones hubiera sido tarea inútil. Un gesto de contrariedad puso en alerta a Calabuig que, sin esperar confirmación sobre la conversación de su compañero, se dirigió raudo hacia la barra para satisfacer el importe del almuerzo. Ya aclararían cuentas en otro momento. Escrihuela, ya en la calle, le hacía gestos para que se diese prisa.
+            </p>
+        </div>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-top: 0;">¿Qué ocultaba el alfarero?</h3>
+            <p style="color: #666; font-size: 1rem;">Descubre por qué una antigua venganza despierta ahora.</p>
+            
+            <a href="index.html#contacto" class="btn-buy">Sigue leyendo</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo que no contó la pólvora | Capítulo 1</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* ESTILO FINAL DE SAGA (PÓLVORA) */
+        :root {
+            --bg-paper: #fffaf0; /* Un tono hueso muy cálido */
+            --text-ink: #292524; /* Negro cálido (Warm Grey) */
+            --accent: #ea580c;   /* NARANJA ÓXIDO / PÓLVORA */
+        }
+
+        body {
+            background-color: var(--bg-paper);
+            color: var(--text-ink);
+            margin: 0;
+            padding: 0;
+            font-family: 'Merriweather', serif;
+            line-height: 1.9;
+            font-size: 19px;
+        }
+
+        /* BARRA DE NAVEGACIÓN */
+        nav {
+            background: white;
+            border-bottom: 1px solid #e7e5e4;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            text-align: center;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: #78716c;
+            font-family: sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: 0.3s;
+        }
+        .back-link:hover { color: var(--accent); }
+
+        /* CONTENEDOR CENTRAL */
+        .reader-container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 80px 25px 120px;
+        }
+
+        /* CABECERA */
+        header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .book-title {
+            font-family: sans-serif;
+            color: #a8a29e;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin: 0;
+            color: #1c1917;
+            line-height: 1.2;
+        }
+
+        /* TEXTO */
+        .chapter-content p {
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        /* LETRA CAPITULAR NARANJA */
+        .chapter-content > p:first-of-type::first-letter {
+            float: left;
+            font-size: 5.5rem;
+            line-height: 0.75;
+            padding-right: 15px;
+            padding-top: 8px;
+            color: var(--accent);
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        /* ESTILO PARA LOS RECUERDOS MILITARES (MONOSPACE / MÁQUINA DE ESCRIBIR) */
+        .military-memory {
+            font-family: 'Courier New', Courier, monospace;
+            background: #f5f5f4;
+            padding: 20px;
+            border-left: 3px solid var(--accent);
+            margin: 30px 0;
+            font-size: 0.9em;
+            color: #57534e;
+        }
+
+        /* SEPARADOR DE ESCENA */
+        .scene-break {
+            text-align: center;
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin: 50px 0;
+            opacity: 0.7;
+            letter-spacing: 5px;
+        }
+
+        /* CAJA FINAL */
+        .cta-box {
+            background: white;
+            border: 1px solid #e7e5e4;
+            border-bottom: 4px solid var(--accent);
+            padding: 50px 30px;
+            text-align: center;
+            margin-top: 80px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+        }
+
+        .btn-buy {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 15px 35px;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            margin-top: 25px;
+            transition: 0.3s;
+            text-transform: uppercase;
+        }
+        .btn-buy:hover { 
+            background-color: #c2410c; 
+            transform: translateY(-2px);
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .chapter-content > p:first-of-type::first-letter { font-size: 4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="back-link">← Volver a la web</a>
+    </nav>
+
+    <div class="reader-container">
+        
+        <header>
+            <div class="book-title">Lo que no contó la pólvora</div>
+            <h1>En la playa</h1>
+        </header>
+
+        <div class="chapter-content">
+            <p>
+                La luz del sol riela sobre el mar mientras la tarde otoñal, recién estrenada, comienza a decaer. Solo el aislado destello metálico de algún carguero abandonando el puerto rompe la estática línea del horizonte. La mar, próxima a la playa, está encrespada, y el rumor del oleaje emite un quejido que parece añorar el verano que ha quedado atrás.
+            </p>
+            <p>
+                Alfonso Escrihuela dormita en la terraza acristalada con vistas a un mar que no ve. Sus pensamientos, otrora lúcidos y analíticos, andan confundidos entre realidades y quimeras, recuerdos forjados durante su dilatada carrera como inspector de policía. Ilusiones lejanas de sus primeros años: toda una década junto a las Casas Colgadas en la serranía conquense, cuando todavía se lo creía todo y aspiraba a contribuir a la construcción de un mundo mejor, más justo. Han pasado muchos años —quizá demasiados— cargados de amarguras y desengaños, también con algunas pinceladas de satisfacción, por qué no decirlo. Ha visto de todo, y la mayoría feo, desagradable y previsible, vista la condición de los seres humanos que le ha tocado en suerte conocer. Pero este final, este broche cruel, no lo había imaginado ni en la peor de sus pesadillas. Si es que realmente ha sucedido, se niega a admitir una y otra vez Alfonso Escrihuela.
+            </p>
+            <p>
+                Su amigo Antonio Daud, exdirector del Instituto de Medicina Legal de Valencia, es dueño de una pequeña vivienda que antaño fue de pescadores. Se esconde entre un grupo de dunas, en la linde de los términos municipales de Sueca y Cullera. Le había sido embargada a un pobre diablo y la adquirió a muy buen precio en la correspondiente subasta judicial, con la intención de pasar allí el mayor tiempo posible tras su jubilación. Su situación actual —a media pensión, como él dice— ni es jubilación ni es nada. Una nueva recaída del maldito cáncer lo tiene de baja desde mediados de septiembre, aunque no se encuentra en tan mal estado como para no poder echarle una mano a su amigo Alfonso, hundido en una profunda melancolía desde el mismo día de la recaída; el día que sobrevino la desgracia.
+            </p>
+            <p>
+                Un escalofrío recorre la espalda de Escrihuela. Abre los ojos y fija la mirada en la chaqueta de punto que reposa hecha un ovillo en la silla, junto a la mecedora en que se acuna, para asegurarse de que realmente es lo que busca, pues a primera vista no la distingue con nitidez. No se la pone; simplemente se la deja caer por encima, como si tuviese que abrochársela por la espalda, imitando las camisas de fuerza que les ponen —o les ponían— a los locos. Sobre ese extremo duda Escrihuela. Él, loco no está. Eso sí, la mente se le bloquea a poco que intenta razonar, y el único remedio que en ocasiones funciona es entornar los ojos de cara al mar y dejarse arrullar por el sonido de las olas. Esa tarde, la mar está picada —poco habitual en el golfo de Valencia— y el ruido del ir y venir de las aguas, en lugar de apaciguarlo, lo está sacando de quicio.
+            </p>
+            <p>
+                —¿Qué pasa, Alfonsito? —pregunta el forense al entrar en el cerramiento, todavía con el olor a marihuana pegado al cuerpo.
+            </p>
+            <p>
+                Al inspector le molesta el tufo a maría, y suele emprenderla con su amigo con la intención de hacerle ver que aquella mierda no es lo más adecuado para sus dolencias.
+            </p>
+            <p>
+                —Las olas, Gordo, las olas. Hoy no las aguanto, resuenan aquí dentro como si estuviera en un campanario —dice, llevándose el índice a la sien derecha—. ¿No hay modo de bajarle el volumen a eso?
+            </p>
+            <p>
+                —Vamos adentro, que está refrescando. Seguro que ahí se oyen menos. Además, no sé dónde he dejado el mando a distancia. Hay que joderse, Alfonso, cómo están las cabezas. ¡Bajar el volumen al mar!
+            </p>
+            <p>
+                Escrihuela no se da por aludido, o quizás no entiende el sarcasmo de su amigo. Se limita a darle la vuelta a la chaqueta, dejarla caer sobre sus hombros y seguir los pasos del forense.
+            </p>
+            <p>
+                —¿Y Raquel? —pregunta Escrihuela cuando el sol amaga por poniente y el mar recupera la normalidad propia del lugar—. Hace rato que no la veo.
+            </p>
+            <p>
+                —¿Dónde habría de estar? Trabajando. Alguien tendrá que mantenerte. ¿Sabes en qué día de la semana estamos?
+            </p>
+            <p>
+                —¿Jueves? —responde, dubitativo, sin la menor certeza de haber dado con la respuesta correcta.
+            </p>
+            <p>
+                —¿Jueves? Hoy es lunes, melón. Raquel viene los fines de semana y se marchó ayer por la tarde. ¿Te apetece que demos un paseo por la playa antes de cenar? Acabo de dar con el mando y he bajado el volumen que tanto te molestaba.
+            </p>
+            <p>
+                —Yo no voy a cenar, no tengo hambre.
+            </p>
+            <p>
+                —De eso ya hablaremos cuando llegue la hora. Te he preguntado si damos un paseo.
+            </p>
+            <p>
+                —Bueno, como tú quieras.
+            </p>
+            <p>
+                Cargados con sendos cayados —algo impropio en gente de su edad medianamente en condiciones, lo que quizás en este caso no sea cierto— abandonan la vivienda. Vistos por detrás, con el andar cansino de Escrihuela, la tos perruna del forense y las cabezas de ambos gachas y cubiertas por dos viejas gorras —que a saber a quién pertenecieron—, parecen sacados de una viñeta de Forges.
+            </p>
+            <p>
+                El paseo marítimo presenta un aspecto desolador: vacío, poco iluminado y cubierto por la arena que el viento ha arrastrado desde la playa. Muy distinto al que presentaba meses atrás, rebosante de gente ansiosa por devorar un trozo de playa y dejarse quemar por un sol que también los había echado en falta durante los primeros años de la pandemia. Un verano tan distinto al otoño que transitan, cuando la recaída del doctor y la desgracia de su amigo ni siquiera constituían un proyecto.
+            </p>
+            <p>
+                Las escasas farolas del paseo muestran y ocultan alternativamente a dos almas en pena, ora mal iluminadas, ora envueltas en las sombras oscuras de un atardecer prematuro y sorpresivo.
+            </p>
+            <p>
+                Vuelve a toser el doctor. Más bien lo asalta un ataque de tos que parece no tener fin, y Escrihuela hace ademán de taparse las orejas. No, no es que le moleste escuchar la tos, ni ver la expectoración que a duras penas consigue expulsar Antonio. No es eso. Es que siente cada golpe como si se produjera en su propia garganta, hasta dolerle, hasta sentir cómo se le revientan los pulmones en carne propia. Y ello lo hace todavía más consciente de lo malito que está Antonio.
+            </p>
+            <p>
+                —Te tenías que haber abrigado más, Gordo. A este paso esa tos te va a matar, por no hablar de esa mierda que sigues fumando.
+            </p>
+            <p>
+                —¡Cojones, Alfonso! Pareces una abuela —tose de nuevo—. Te pasas el día sin decir palabra y cuando abres la boca no es más que para meterte conmigo. Si ha de ser así, no voy a tener más remedio que darlo por bueno; al menos me ayuda a saber que estás vivo. Prefiero toser antes que aguantar tus ancianadas.
+            </p>
+            <p>
+                —Es que no me apetece hablar, ya lo sabes. Pero no puedo dejar que te mates tú solito de esa forma tan estúpida.
+            </p>
+            <p>
+                —No te apetece hablar, ni comer, ni leer, ni nada de nada. Eso ya lo sé. Pero que te quede claro que a mí no me va a matar un poco de hierba, sino esta mierda de cáncer que no hace más que dar por culo.
+            </p>
+            <p>
+                Cabecea Escrihuela, negando las palabras de su amigo, sin energía para rebatirlo y con ganas de cogerlo por los hombros, zarandearlo con unas fuerzas que no tiene de dónde sacar y hacerle ver una realidad que, bien pensado, ni él mismo sabe cuál es. Una sensación de impotencia se adueña del inspector. «Si al menos todo fuera culpa de la maría», piensa, aunque sabe que no; claro que no.
+            </p>
+            <p>
+                De vuelta a casa, la luna les hace un guiño sobre la lámina de mercurio en que se ha convertido el mar, refulgente como plata bruñida. El viento ha cesado, al igual que la breve charla entre los dos amigos, mientras el arrastrar de pies de Escrihuela hace de contrapunto al siseo de la resaca marina, acompañando a lo que queda de ola de vuelta al mar. Solo calma, penumbra y dos hombres apuntalados el uno contra el otro en un intento por evitar el desmoronamiento prematuro de sus vidas o, como poco, de su integridad como seres humanos.
+            </p>
+            <p>
+                —¿Qué te preparo para cenar, Alfonso?
+            </p>
+            <p>
+                —Ya te he dicho que no tengo hambre.
+            </p>
+            <p>
+                —Mira, General, no seas gilipollas, que mañana tengo quimio y no sé cómo me va a sentar. De la última vez hace dos semanas —y aunque seguro que ya no te acuerdas— estuve de vomiteras sin poder moverme, así que aprovecha o te puedes pegar unos cuantos días de ayuno.
+            </p>
+            <p>
+                Más que cenar, Escrihuela se dedica a mover los trocitos de tortilla francesa de un lado a otro del plato, ahuyentándolos en un mal disimulado intento por engañar al forense. Este, entre bocado y bocado, cabecea preocupado por la situación de su amigo, que no avanza en su recuperación. Coge una manzana roja, la frota con la servilleta hasta sacarle brillo sin prisa, la pela y la corta.
+            </p>
+            <p>
+                —Anda, General, toma. Esto entra sin ganas —dice, entregándole la fruta a Escrihuela, que, más por deferencia con el gesto que por otra razón, pues apetito no tiene, muerde la pulpa en un crac sonoro.
+            </p>
+            <p>
+                Escrihuela, insomne en la cama, sufre y llora quedo, impotente e incapaz de ayudar a Antonio, cada vez más corroído por la metástasis que adivina en su aspecto y que este pretende ocultarle en vano. La mente rebobina cuarenta años de película en un breve suspiro.
+            </p>
+            
+            <div class="military-memory">
+                Izquierda…, izquierda…, izquierda derecha izquierda.<br>
+                Tercien… armas.<br>
+                Paso… ligero.<br>
+                Ardor guerrero.<br>
+                Daud, Escrihuela, segunda y tercera imaginaria, las que más joden.<br>
+                Tic-tac, tic-tac, las dos. Tic-tac, tic-tac, las tres.<br>
+                Antonio ronca. A su manera, Alfonso vela por él.<br>
+                Tic-tac, tic-tac.<br>
+                ¡Imaginaria, botijo!
+            </div>
+
+            <div class="scene-break">* * *</div>
+
+            <p>
+                La psiquiatra Raquel Ferrer, esposa de Escrihuela, permanece sentada en su despacho del hospital cuando la terapeuta Irene Albors entra sin llamar. Ambas trabajan en el mismo centro y mantienen una relación que, sin llegar a la amistad, supera con creces la mera cortesía profesional.
+            </p>
+            <p>
+                —¿Sigue con su amigo el forense? —pregunta Irene.
+            </p>
+            <p>
+                —Sí, allí están. Tal como hablamos, dejarlo solo todo el día en casa no era una opción. Antonio, además de médico, sabe cómo tratarlo. Los fines de semana los paso con ellos en la playa.
+            </p>
+            <p>
+                —¿Y cómo lo ves?
+            </p>
+            <p>
+                —Igual. Apático, melancólico, enrocado en la negación. Apenas come y ha perdido peso. Por ahora, los antidepresivos no parecen hacerle demasiado efecto. Tendremos que afinar mejor la dosis. Sé que lo vamos a sacar de esta, pero no te voy a mentir: estoy muy preocupada.
+            </p>
+            <p>
+                —Sería raro que no lo estuvieras. Aunque sabes bien que hasta que no admita lo ocurrido será complicado hacer terapia con él.
+            </p>
+            <p>
+                Raquel se levanta despacio y se acerca a la ventana que da al patio interior del hospital. Observa a la gente que circula a cara descubierta, mucha más de la que solía verse durante los meses más duros de la pandemia. Cuánto han cambiado las cosas en tan poco tiempo, piensa.
+            </p>
+            <p>
+                —Apenas consigo que me cuente nada —continúa Irene—. Necesita un estímulo, un empujón que lo ponga en marcha, y no sé cómo provocarlo.
+            </p>
+            <p>
+                —Yo tenía toda mi confianza puesta en Antonio. Lo conoce como nadie y lo quiere con locura. Pero ya sabes cómo son las desgracias: nunca vienen solas. Su cáncer ha vuelto, y esta vez con saña. Lo están tratando aquí mismo, en nuestro hospital. El doctor Baena, el jefe de oncología, me dijo hace poco que vienen tiempos difíciles. Le han detectado metástasis y han intensificado las sesiones de quimio. No sé si estará en condiciones de ayudar a Alfonso.
+            </p>
+            <p>
+                —Quizá esa misma dificultad termine convirtiéndose en una aliada. Si Alfonso ve que Antonio necesita de él, puede que empiece a tomar conciencia de su situación... y poco a poco se active.
+            </p>
+            <p>
+                —Tal vez. La amistad es un arma poderosa, quizá la única capaz de salvarlos a los dos. Ojalá tengas razón.
+            </p>
+        </div>
+
+        <div class="cta-box">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-top: 0;">¿Es este el final de Escrihuela?</h3>
+            <p style="color: #666; font-size: 1rem;">La última batalla no se libra contra los criminales, sino contra la vida misma.</p>
+            
+
+        </div>
+
+    </div>
+
+</body>
+</html>

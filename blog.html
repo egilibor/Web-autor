@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | La Rebotica del Escritor - Emilio Gil Ibor</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@700&family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-ink: #0f172a;
+            --color-polvora: #ea580c;
+            --font-serif: 'Playfair Display', serif;
+            --font-body: 'Merriweather', serif;
+        }
+
+        body {
+            margin: 0; padding: 0;
+            background-color: #fdfdfd;
+            font-family: 'Lato', sans-serif;
+            color: #334155;
+        }
+
+        /* Navegación sutil */
+        nav {
+            padding: 30px 0;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+            background: white;
+        }
+        .nav-link {
+            text-decoration: none;
+            color: #64748b;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 0 60px;
+        }
+
+        header h1 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            color: var(--color-ink);
+            margin-bottom: 10px;
+        }
+
+        .blog-subtitle {
+            color: var(--color-polvora);
+            font-weight: bold;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        /* Estilo de la lista de artículos */
+        .post-list {
+            margin-top: 40px;
+        }
+
+        .post-item {
+            margin-bottom: 60px;
+            border-bottom: 1px solid #f1f5f9;
+            padding-bottom: 40px;
+            transition: 0.3s;
+        }
+
+        .post-date {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            font-weight: bold;
+        }
+
+        .post-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin: 10px 0 20px;
+            line-height: 1.2;
+        }
+
+        .post-title a {
+            text-decoration: none;
+            color: var(--color-ink);
+        }
+
+        .post-title a:hover {
+            color: var(--color-polvora);
+        }
+
+        .post-excerpt {
+            font-family: var(--font-body);
+            line-height: 1.8;
+            color: #475569;
+            font-size: 1.1rem;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 20px;
+            color: var(--color-polvora);
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            color: #94a3b8;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-link">← Volver al inicio</a>
+    </nav>
+
+    <header class="container">
+        <span class="blog-subtitle">Cuaderno de Bitácora</span>
+        <h1>La Rebotica del Escritor</h1>
+        <p>Reflexiones, procesos y retazos de realidad por Emilio Gil Ibor.</p>
+    </header>
+
+    <main class="container">
+        <div class="post-list">
+
+            <article class="post-item">
+                <span class="post-date">8 DE FEBRERO, 2026</span>
+                <h2 class="post-title"><a href="post-proceso.html">Cómo comenzó todo</a></h2>
+                <p class="post-excerpt">
+                    ¿Cómo influye el rigor de una farmacia en la construcción de un cadáver en una novela negra? Hoy os cuento cómo mi profesión me ayuda a dar veracidad a los detalles más oscuros...
+                </p>
+                <a href="plantilla_blog.html" class="read-more">Seguir leyendo →</a>
+            </article>
+
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Emilio Gil Ibor. Todas las palabras aquí escritas me pertenecen.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

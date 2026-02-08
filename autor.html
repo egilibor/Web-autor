@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre el Autor | Emilio Gil Ibor</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --color-polvora: #ea580c; /* El naranja que usamos para el acento */
+            --font-serif: 'Playfair Display', serif;
+            --font-body: 'Merriweather', serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            font-family: var(--font-body);
+            color: #1e293b;
+        }
+
+        nav {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 15px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: #64748b;
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .author-section {
+            padding: 80px 0;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            flex-wrap: wrap;
+        }
+
+        .author-image-container {
+            flex: 1;
+            min-width: 320px;
+            text-align: center;
+        }
+
+        .author-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 5px;
+            filter: grayscale(15%);
+            box-shadow: 20px 20px 0px var(--color-polvora);
+            transition: transform 0.3s ease;
+        }
+
+        .author-image:hover {
+            transform: translate(-5px, -5px);
+        }
+
+        .author-text {
+            flex: 2;
+            min-width: 350px;
+        }
+
+        .author-text h2 {
+            font-family: var(--font-serif);
+            font-size: 3rem;
+            margin: 0 0 10px 0;
+            color: #0f172a;
+        }
+
+        .author-tagline {
+            color: var(--color-polvora);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            display: block;
+        }
+
+        .author-bio p {
+            line-height: 1.9;
+            color: #475569;
+            font-size: 1.15rem;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #f1f5f9;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .author-section { padding: 40px 0; gap: 40px; }
+            .author-text h2 { font-size: 2.2rem; }
+            .author-image { box-shadow: 15px 15px 0px var(--color-polvora); }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="back-link">← Volver al inicio</a>
+    </nav>
+
+    <main class="container">
+        <section class="author-section">
+            
+            <div class="author-image-container">
+                <img src="foto_autor.png" alt="Emilio Gil Ibor" class="author-image">
+            </div>
+
+            <div class="author-text">
+                <span class="author-tagline">Escritor y Observador</span>
+                <h2>Emilio Gil Ibor</h2>
+                
+                <div class="author-bio">
+                    <p>
+                        Alaquàs (Valencia) 1958, Emilio Gil Ibor ha pasado una buena parte de su vida profesional entre fórmulas y reboticas, una perspectiva privilegiada para observar la condición humana desde el rigor y la cercanía. Esa mirada analítica es la que hoy traslada a sus novelas, donde la precisión del detalle se mezcla con la profundidad del suspense.
+                    </p>
+                    <p>
+                        Su andadura literaria se consolidó con la <strong>Saga del Inspector Escrihuela</strong>, una tetralogía que arranca con <em>Violín Roto</em> y que se ha convertido en un referente del noir valenciano, explorando los claroscuros de la sociedad junto a personajes inolvidables como el inspector Alfonso Escrihuela, el subinspector Calabuig y el forense Antonio Daud.
+                    </p>
+                    <p>
+                        Con una prosa contundente y una narrativa que no concede tregua, Emilio, con una voz más madura, expande ahora su universo hacia nuevos territorios, desde el noir rural de <em>Tiempos de rebotica</em> o el misterio literario de <em>La huella de su voz</em>, hasta la intriga global de <em>El día que cerró el mundo</em>.
+                    </p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Emilio Gil Ibor. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
