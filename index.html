@@ -191,28 +191,33 @@
             .bio-grid { grid-template-columns: 1fr; }
             .hero-image img { max-width: 280px; } /* Un poco más pequeña en móvil */
         }
-        /* ARREGLO PARA MÓVILES Y TABLETS */
-        @media (max-width: 992px) {
-            .hero {
-                padding: 120px 20px 60px; /* Ajustamos el espacio */
-                min-height: auto;        /* Que la altura crezca según el texto */
-                background: #fff;        /* Quitamos el degradado dividido que en móvil queda raro */
-            }
-
-            .hero-grid {
-                grid-template-columns: 1fr; /* ¡MAGIA! Pasa de 2 columnas a 1 sola */
-                gap: 40px;
-                text-align: center;         /* Centramos el texto para que luzca más */
-            }
-
-            .hero-content h1 {
-                font-size: 2.5rem;          /* Título un poco más pequeño para que quepa */
-            }
-
-            .hero-image img {
-                max-width: 280px;           /* Imagen un pelín más pequeña en móvil */
-            }
+    /* ARREGLO FORZADO PARA MÓVILES */
+    @media (max-width: 992px) {
+        .hero {
+            padding: 100px 20px 40px !important;
+            min-height: auto !important;
+            display: block !important; /* Cambiamos flex por block para evitar solapamientos */
         }
+
+        .hero-grid {
+            display: block !important; /* Forzamos que los elementos caigan uno debajo de otro */
+        }
+
+        .hero-content {
+            margin-bottom: 30px !important;
+            text-align: center !important;
+        }
+
+        .hero-content h1 {
+            font-size: 2.2rem !important;
+            line-height: 1.2 !important;
+        }
+
+        .hero-image img {
+            max-width: 250px !important;
+            margin: 0 auto !important;
+        }
+    }
     </style>
 </head>
 <body>
