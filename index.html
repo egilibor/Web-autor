@@ -127,7 +127,7 @@
             background: linear-gradient(to right, #fff 55%, #f1f5f9 55%);
         }
         .hero-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-        .hero-content h1 { font-family: var(--font-serif); font-size: 3.5rem; line-height: 1.1; margin-bottom: 50px; }
+        .hero-content h1 { font-family: var(--font-serif); font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
         .hero-image img {
             width: 100%; max-width: 380px; display: block; margin: 0 auto;
             border-radius: 4px; box-shadow: 20px 20px 0px rgba(0,0,0,0.05);
@@ -190,6 +190,28 @@
             .menu { display: none; }
             .bio-grid { grid-template-columns: 1fr; }
             .hero-image img { max-width: 280px; } /* Un poco más pequeña en móvil */
+        }
+        /* ARREGLO PARA MÓVILES Y TABLETS */
+        @media (max-width: 992px) {
+            .hero {
+                padding: 120px 20px 60px; /* Ajustamos el espacio */
+                min-height: auto;        /* Que la altura crezca según el texto */
+                background: #fff;        /* Quitamos el degradado dividido que en móvil queda raro */
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr; /* ¡MAGIA! Pasa de 2 columnas a 1 sola */
+                gap: 40px;
+                text-align: center;         /* Centramos el texto para que luzca más */
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;          /* Título un poco más pequeño para que quepa */
+            }
+
+            .hero-image img {
+                max-width: 280px;           /* Imagen un pelín más pequeña en móvil */
+            }
         }
     </style>
 </head>
