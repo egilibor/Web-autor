@@ -24,6 +24,7 @@
             font-family: 'Merriweather', serif;
             line-height: 1.9;
             font-size: 19px;
+            overflow-x: hidden;
         }
 
         /* BARRA DE NAVEGACIÓN */
@@ -40,7 +41,7 @@
         .back-link {
             text-decoration: none;
             color: #64748b;
-            font-family: sans-serif;
+            font-family: system-ui, sans-serif;
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -95,6 +96,8 @@
         .chapter-content p {
             margin-bottom: 25px;
             text-align: justify;
+            hyphens: auto;
+            -webkit-hyphens: auto;
         }
 
         /* LETRA CAPITULAR PIZARRA */
@@ -145,13 +148,14 @@
             color: white;
             padding: 15px 35px;
             text-decoration: none;
-            font-family: sans-serif;
+            font-family: system-ui, sans-serif;
             font-weight: bold;
             letter-spacing: 1px;
             font-size: 0.9rem;
             margin-top: 25px;
             transition: 0.3s;
             text-transform: uppercase;
+            border-radius: 0;
         }
         .btn-buy:hover { 
             background-color: #334155; 
