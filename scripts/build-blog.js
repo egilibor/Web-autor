@@ -15,6 +15,7 @@ const { marked } = require("marked");
 const ROOT = path.join(__dirname, "..");
 const POSTS_DIR = path.join(ROOT, "content", "posts");
 const BLOG_HTML_PATH = path.join(ROOT, "blog.html");
+const MANIFEST_PATH = path.join(ROOT, "content", ".generated-posts.json");
 
 const MESES = [
   "enero", "febrero", "marzo", "abril", "mayo", "junio",
@@ -113,21 +114,25 @@ function main() {
   }
 
   const files = fs.readdirSync(POSTS_DIR).filter((f) => f.endsWith(".md"));
-  const posts = files.map((filename) => {
-    const raw = fs.readFileSync(path.join(POSTS_DIR, filename), "utf8");
-    const { data, content } = matter(raw);
-    const slug = data.slug || slugify(data.title || filename.replace(/\.md$/, ""));
-    const contentHtml = marked.parse(content || "");
-    const excerpt = data.excerpt ? data.excerpt : stripToExcerpt(contentHtml);
-    return {
-      title: data.title || "Sin título",
-      date: data.date || new Date(),
-      excerpt,
-      slug,
-      contentHtml,
-      href: `${slug}.html`,
-    };
-  });
+  const posts = files
+    .map((filename) => {
+      const raw = fs.readFileSync(path.join(POSTS_DIR, filename), "utf8");
+      const { data, content } = matter(raw);
+      // Archivo vacío o sin frontmatter real: lo ignoramos (no es un post válido).
+      if (!data || Object.keys(data).length === 0) return null;
+      const slug = data.slug || slugify(data.title || filename.replace(/\.md$/, ""));
+      const contentHtml = marked.parse(content || "");
+      const excerpt = data.excerpt ? data.excerpt : stripToExcerpt(contentHtml);
+      return {
+        title: data.title || "Sin título",
+        date: data.date || new Date(),
+        excerpt,
+        slug,
+        contentHtml,
+        href: `${slug}.html`,
+      };
+    })
+    .filter(Boolean);
 
   posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
@@ -141,6 +146,31 @@ function main() {
     fs.writeFileSync(path.join(ROOT, post.href), html, "utf8");
     console.log(`Generado ${post.href}`);
   }
+
+  // 1b. Borrar páginas de entradas que ya no existen (se borraron desde el panel)
+  const currentHrefs = posts.map((p) => p.href);
+  let previousHrefs = [];
+  if (fs.existsSync(MANIFEST_PATH)) {
+    try {
+      previousHrefs = JSON.parse(fs.readFileSync(MANIFEST_PATH, "utf8"));
+    } catch (e) {
+      previousHrefs = [];
+    }
+  }
+  const orphanHrefs = previousHrefs.filter((href) => !currentHrefs.includes(href));
+  for (const href of orphanHrefs) {
+    const filePath = path.join(ROOT, href);
+    if (fs.existsSync(filePath)) {
+      try {
+        fs.unlinkSync(filePath);
+        console.log(`Eliminado ${href} (entrada borrada)`);
+      } catch (e) {
+        console.warn(`No se pudo eliminar ${href}: ${e.message}`);
+      }
+    }
+  }
+  fs.mkdirSync(path.dirname(MANIFEST_PATH), { recursive: true });
+  fs.writeFileSync(MANIFEST_PATH, JSON.stringify(currentHrefs, null, 2), "utf8");
 
   // 2. Regenerar el listado dentro de blog.html
   const blogHtml = fs.readFileSync(BLOG_HTML_PATH, "utf8");
