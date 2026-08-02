@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  branch: main
+
+site_url: https://emiliogil.es
+display_url: https://emiliogil.es
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "posts"
+    label: "Entradas del blog"
+    label_singular: "Entrada"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "DD/MM/YYYY", time_format: false }
+      - { label: "Extracto (resumen breve para el listado del blog)", name: "excerpt", widget: "text", required: false }
+      - { label: "Contenido", name: "body", widget: "markdown", buttons: ["bold", "italic", "link", "quote"] }
